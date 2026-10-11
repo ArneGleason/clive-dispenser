@@ -11,9 +11,11 @@ def sdf_mesh(fn, lo, hi, step=GRID):
     """Mesh the zero level of fn over the box lo..hi (mm)."""
     # The odd offset keeps grid vertices off planes we later cut on (like x = 0).
     axes = [np.arange(lo[i] - 2 * step + 0.0137, hi[i] + 2 * step, step, dtype=np.float32) for i in range(3)]
-    X, Y, Z = np.meshgrid(*axes, indexing="ij")
-    d = fn((X, Y, Z)).astype(np.float32)
-    del X, Y, Z
+    d = np.empty([len(a) for a in axes], np.float32)
+    chunk = max(1, int(4e6 // (len(axes[1]) * len(axes[2]))))
+    for i in range(0, len(axes[0]), chunk):   # in slabs, to keep memory bounded
+        X, Y, Z = np.meshgrid(axes[0][i:i + chunk], axes[1], axes[2], indexing="ij")
+        d[i:i + chunk] = fn((X, Y, Z))
     # Close the volume so the surface is watertight.
     d[0, :, :] = d[-1, :, :] = d[:, 0, :] = d[:, -1, :] = d[:, :, 0] = d[:, :, -1] = 1.0
     verts, faces, _, _ = marching_cubes(d, 0.0, spacing=(step, step, step))

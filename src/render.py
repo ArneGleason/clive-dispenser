@@ -70,7 +70,7 @@ for i, t in enumerate(cfg.get("text", [])):
     ob.data.materials.append(plastic(f"t{i}", 0.5, 1.0, t["color"]))
 
 # Floor + soft studio lighting.
-bpy.ops.mesh.primitive_plane_add(size=4, location=(0, 0, -0.0002))
+bpy.ops.mesh.primitive_plane_add(size=4, location=(0, 0, cfg.get("floor_z", -3.0) * S - 0.0002))
 floor = bpy.context.object
 fm = bpy.data.materials.new("floor")
 fm.use_nodes = True

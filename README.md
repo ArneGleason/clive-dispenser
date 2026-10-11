@@ -27,19 +27,22 @@ famous brick-candy dispenser, but with a mooning garden gnome. Designed for
 
 ## Parts to print
 
+Single-colour print files are in `stl/`. Colour versions are in `colour/` (see
+[Colour printing](#colour-printing)).
+
 | File | Qty | Notes |
 |---|---|---|
-| `body_left.stl`, `body_right.stl` | 1 each | Print flat on the cut face. Tree supports only under the arms and legs. |
-| `head.stl` | 1 | Hat up. Supports under the beard. |
+| `body_left.stl`, `body_right.stl` | 1 each | Print flat on the cut face. Tree supports under the arms, hands and legs. |
+| `head.stl` | 1 | Hat up. Supports under the beard and moustache. |
 | `lever.stl` | 1 | Flat. 100% infill (it's small and takes the load). |
 | `tray_pez.stl` **or** `tray_tictac.stl` | 1 | Pocket facing up. |
 | `hopper_pez.stl` **or** `hopper_tictac.stl` | 1 | Upright, flange down. Smooth bore matters most. |
 | `refill_lid.stl` | 1 | Outer face up. |
 | `axle_3mm_optional.stl`, `tray_pin_3mm_optional.stl` | 1 each | Only if you can't find 3 mm rod. |
 
-Suggested settings: 0.12–0.16 mm layers, 3 perimeters, 15% infill, PLA or PETG.
-Resin printers should handle it well. Leave the default clearances and sand
-the sliding faces lightly.
+Suggested settings: 0.12 mm layers (0.08 mm brings out the face and beard), 0.4 mm
+nozzle or finer, 3 perimeters, 15% infill, PLA or PETG. Resin printers handle the
+detail best. Leave the default clearances and sand the sliding faces lightly.
 
 ## Hardware
 
@@ -57,6 +60,29 @@ the sliding faces lightly.
 4. Dry-fit the right half with the dowels. Rock the lever and check that the tray slides freely, **before gluing**.
 5. Glue the halves, then glue the head onto the lever's post with the head upright.
 6. Drop the hopper in from the back, flange up, so it hangs from its ledge. Fill it with candies **lying flat** and press on the lid.
+
+## Colour printing
+
+Clive comes with a full paint job, computed from the same shapes that make
+the model, so it lines up exactly. It includes:
+- painted eyes with a glint, the wink, and rosy cheeks, nose, ears, knees and bum;
+- exaggerated grime in every crease and fold, so the detail reads at 15 cm;
+- edge wear and chipped paint showing pale plaster;
+- mottled, speckled paint like the ad's vintage print;
+- moss in the plinth's pits and dirt creeping up from the ground.
+
+The painted parts are the two body halves, the head, the refill lid and the
+tray, whose back is the hatch in his bum. The lever, hopper, axle and pin are
+hidden inside, so print them in any colour.
+
+| Your printer | Use | Notes |
+|---|---|---|
+| **Full-colour** (inkjet-style: PolyJet, Mimaki and similar; usually through a print service) | `colour/full/*.3mf` (per-vertex colour), or `colour/full/*_textured.zip` (OBJ + MTL + 4K PNG texture) | Gets the whole paint job: gradients, grime, wear. Most services ask for textured OBJ. |
+| **Multi-filament FDM** (filament changers such as AMS-style units, or tool changers) | `colour/multi/clive_8_filament_obj.zip` (one OBJ + MTL per part) | Every face gets one of 8 flat filament colours: red, blue, skin, white, brown, black, stone and gold. Recent Bambu Studio / OrcaSlicer versions import coloured OBJs and let you map each colour to a filament. With only 6 slots, merge gold into stone and brown into black. |
+| **Single colour** | `stl/` | Paint by hand. The colour list above is the palette. |
+
+Rebuilding also writes the painted meshes as vertex-coloured PLYs
+(`out/colour/full/*.ply`). They open straight into Blender or MeshLab.
 
 ## Food safety
 
@@ -77,6 +103,7 @@ not a food-grade product.
 - the spring stays within a sensible compression range.
 
 Latest run: **25 of 25 checks passed** ([`report.json`](report.json)).
+Thinnest wall around the mechanism: 1.39 mm.
 
 What the virtual test *can't* tell you: friction, print tolerances, how sticky
 the candy is, or whether a slightly rough hopper bore jams. Those need a real print.
@@ -91,28 +118,37 @@ Anything up to about 15.6 × 8.6 × 5.5 mm fits the existing body.
 ## Rebuilding
 
 ```bash
-pip install -r requirements.txt          # numpy, scikit-image, trimesh, manifold3d, bpy
-python3 src/make_text.py assets/clive_text.stl   # nameplate lettering (needs bpy)
-python3 src/build.py out --grid 0.45     # parts + checks (about 2 minutes)
-python3 src/render_all.py out            # renders (Blender/Cycles, CPU)
+pip install -r requirements.txt                 # numpy, scikit-image, trimesh, manifold3d, bpy
+python3 src/make_text.py assets/clive_text.stl  # CLIVE lettering for the plinth (needs bpy)
+python3 src/build.py out --texture              # parts, paint, checks (about 9 minutes on 4 cores)
+python3 src/render_all.py out                   # renders (Blender/Cycles, CPU)
+python3 src/contact_sheet.py out/renders         # the overview image at the top of this page
 ```
 
-The build writes to `out/` (ignored by Git). Copy `out/stl/*`, `out/renders/*`
-and `out/report.json` over the published `stl/`, `renders/` and `report.json`
-when you release a new version. `out/ply/` holds vertex-coloured meshes that
+The build writes to `out/` (ignored by Git). To release a new version, copy
+`out/stl/*`, `out/renders/*` and `out/report.json` over the published
+`stl/`, `renders/` and `report.json`. Zip the colour files as `colour/` is laid
+out. Use `--grid 0.5 --head-grid 0.4` for quick drafts. `out/ply/` holds vertex-coloured meshes that
 open straight in Blender, posed at rest and fully open.
 
-On Windows use `py` in place of `python3`. The lettering script looks for
-DejaVu Sans Bold at a Linux path and falls back to Blender's built-in font.
+On Windows use `py` in place of `python3`. The lettering script uses DejaVu
+Serif Bold where it exists, then Georgia Bold, then Blender's built-in font.
 
-The sculpt is made of signed distance fields (`src/gnome.py`). Everything
-is plain code, so you can change his pose, belly or hat and rebuild.
+How it's made:
+- **Sculpt** (`src/gnome.py`): signed distance fields: ellipsoids, tapered
+  capsules and tori, blended smoothly, with noise for cloth, hair and stone.
+  It's plain code, so you can change his pose, belly or hat and rebuild.
+- **Paint** (`src/paint.py`): computed from the same fields.
+- **Mechanism** (`src/mechanism.py`): exact solids, built with manifold3d.
+
+The face is the part most worth a sculptor's hand. Import `out/colour/full/head.ply`
+into Blender, refine it, and keep the neck socket where it is.
 
 ## License
 
 Public domain: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 Print it, change it, sell it. No attribution needed. The nameplate lettering
-is generated from DejaVu Sans Bold, whose license permits this.
+is generated from DejaVu Serif Bold, whose licence permits this.
 
 Not affiliated with, or endorsed by, any candy or dispenser brand. "Pez" and
 "Tic Tac" are trademarks of their owners and are only used to describe

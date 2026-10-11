@@ -40,6 +40,8 @@ SHOTS = {
     "hero_closed": dict(objects=parts("rest"), camera={"loc": [235, -255, 170], "target": [0, 2, 72], "lens": 62}),
     "hero_open": dict(objects=parts("open"), camera={"loc": [235, -255, 170], "target": [0, 2, 72], "lens": 62}),
     "front_closed": dict(objects=parts("rest"), camera={"loc": [260, 230, 150], "target": [0, 10, 80], "lens": 62}),
+    "face": dict(objects=parts("rest"), camera={"loc": [112, 30, 112], "target": [2, 42, 104], "lens": 85}),
+    "plinth": dict(objects=parts("rest"), camera={"loc": [40, -170, 40], "target": [0, -20, 20], "lens": 60}),
     "side_open": dict(objects=parts("open"), camera={"loc": [380, 40, 130], "target": [0, 8, 78], "lens": 62}),
     # Cutaways: drop Clive's right half (+x) and ghost the hopper so the stack shows.
     "cutaway_rest": dict(objects=parts("rest", hide=("body_right", "lid"), ghost=("sleeve",)),

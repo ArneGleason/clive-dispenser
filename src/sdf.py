@@ -66,3 +66,87 @@ def union(ds, k=0.0):
     for d in ds[1:]:
         out = smin(out, d, k)
     return out
+
+
+def smax(a, b, k):
+    """Smooth intersection."""
+    return -smin(-a, -b, k)
+
+
+def ssub(a, b, k):
+    """Smoothly carve b out of a."""
+    return -smin(-a, b, k)
+
+
+def rbox(p, c, half, r=0.0):
+    """Axis-aligned rounded box."""
+    x, y, z = p
+    qx = np.abs(x - c[0]) - (half[0] - r)
+    qy = np.abs(y - c[1]) - (half[1] - r)
+    qz = np.abs(z - c[2]) - (half[2] - r)
+    out = length(np.maximum(qx, 0), np.maximum(qy, 0), np.maximum(qz, 0))
+    return out + np.minimum(np.maximum(np.maximum(qx, qy), qz), 0) - r
+
+
+def round_rect(x, y, c, hx, hy, corner):
+    """2D rounded rectangle distance."""
+    qx = np.abs(x - c[0]) - (hx - corner)
+    qy = np.abs(y - c[1]) - (hy - corner)
+    return length(np.maximum(qx, 0), np.maximum(qy, 0)) + np.minimum(np.maximum(qx, qy), 0) - corner
+
+
+def ellipse2d(x, y, c, r):
+    """Approximate 2D ellipse distance."""
+    qx, qy = (x - c[0]) / r[0], (y - c[1]) / r[1]
+    k0 = length(qx, qy)
+    k1 = length(qx / r[0], qy / r[1])
+    return k0 * (k0 - 1.0) / np.maximum(k1, 1e-9)
+
+
+def extrude(d2, z, z0, z1, round_r=0.0):
+    """Extrude a 2D distance between z0 and z1 with rounded edges."""
+    w0 = d2 + round_r
+    w1 = np.abs(z - (z0 + z1) / 2) - ((z1 - z0) / 2 - round_r)
+    return length(np.maximum(w0, 0), np.maximum(w1, 0)) + np.minimum(np.maximum(w0, w1), 0) - round_r
+
+
+def chain(p, pts, radii, k=0.5):
+    """Tapered capsules along a polyline (for locks of hair, fingers, curls)."""
+    out = None
+    for i in range(len(pts) - 1):
+        d = capsule(p, pts[i], pts[i + 1], radii[i], radii[i + 1])
+        out = d if out is None else smin(out, d, k)
+    return out
+
+
+def basis(axis):
+    """Unit axis plus two perpendicular unit vectors."""
+    a = np.asarray(axis, float)
+    a /= np.linalg.norm(a)
+    helper = np.array([1.0, 0, 0]) if abs(a[0]) < 0.9 else np.array([0, 1.0, 0])
+    e1 = np.cross(a, helper)
+    e1 /= np.linalg.norm(e1)
+    return a, e1, np.cross(a, e1)
+
+
+def torus_var(p, c, axis, big_r, small_r_fn):
+    """Torus whose tube radius varies with the angle around its axis."""
+    x, y, z = p
+    a, e1, e2 = basis(axis)
+    rx, ry, rz = x - c[0], y - c[1], z - c[2]
+    along = rx * a[0] + ry * a[1] + rz * a[2]
+    c1 = rx * e1[0] + ry * e1[1] + rz * e1[2]
+    c2 = rx * e2[0] + ry * e2[1] + rz * e2[2]
+    phi = np.arctan2(c2, c1)
+    return length(length(c1, c2) - big_r, along) - small_r_fn(phi)
+
+
+def axis_coords(p, origin, axis):
+    """Height along an axis, distance from it, and the angle around it."""
+    x, y, z = p
+    a, e1, e2 = basis(axis)
+    rx, ry, rz = x - origin[0], y - origin[1], z - origin[2]
+    h = rx * a[0] + ry * a[1] + rz * a[2]
+    c1 = rx * e1[0] + ry * e1[1] + rz * e1[2]
+    c2 = rx * e2[0] + ry * e2[1] + rz * e2[2]
+    return h, length(c1, c2), np.arctan2(c2, c1)

@@ -1,9 +1,11 @@
 """Build every printable part of Clive, check the mechanism, export files.
 
-    python3 build.py OUT_DIR [--grid 0.45]
+    python3 build.py OUT_DIR [--grid 0.35] [--head-grid 0.3] [--texture]
 
-Writes OUT_DIR/stl/*.stl (print files), OUT_DIR/ply/*.ply (coloured, for
-renders) and OUT_DIR/report.md (the virtual test results).
+Writes OUT_DIR/stl/*.stl (single-colour print files), OUT_DIR/colour/
+(full-colour 3MF and textured OBJ, plus an 8-filament OBJ set),
+OUT_DIR/ply/*.ply (painted, for renders) and OUT_DIR/report.json (the
+virtual test results).
 """
 import argparse
 import json
@@ -15,16 +17,20 @@ import manifold3d as mf
 import numpy as np
 import trimesh
 
+import colour_export
 import gnome
 import mechanism as M
+import paint
 import params as P
 from meshing import save_ply, save_stl, sdf_mesh, to_manifold
 
 ap = argparse.ArgumentParser()
 ap.add_argument("out")
 ap.add_argument("--grid", type=float, default=P.GRID)
+ap.add_argument("--head-grid", type=float, default=0.3)
+ap.add_argument("--texture", action="store_true", help="also bake textured OBJs (slow)")
 args = ap.parse_args()
-for d in ("stl", "ply"):
+for d in ("stl", "ply", "colour/full", "colour/multi"):
     os.makedirs(os.path.join(args.out, d), exist_ok=True)
 T0 = time.time()
 log = []
@@ -44,10 +50,10 @@ def head_sdf(p):
 
 
 # --- sculpt -----------------------------------------------------------------
-BODY_BOX = ((-45, -45, -1), (45, 52, 118))
+BODY_BOX = ((-45, -45, -4), (45, 52, 118))
 HEAD_BOX = ((-30, 10, 70), (30, 70, 165))
 sculpt = to_manifold(*sdf_mesh(body_sdf, *BODY_BOX, step=args.grid))
-head_raw = to_manifold(*sdf_mesh(head_sdf, *HEAD_BOX, step=args.grid))
+head_raw = to_manifold(*sdf_mesh(head_sdf, *HEAD_BOX, step=args.head_grid))
 head_fat = to_manifold(*sdf_mesh(lambda p: head_sdf(p) - 0.63, *HEAD_BOX, step=max(args.grid, 0.6)))
 TEXT_STL = os.path.join(os.path.dirname(__file__), "..", "assets", "clive_text.stl")
 if os.path.exists(TEXT_STL):
@@ -216,19 +222,43 @@ for c in P.CANDY:
     save_stl(sleeves[c], f"{stl}/hopper_{c}.stl")
 
 
-def paint(fn):
-    def colour(v):
-        c = gnome.paint_colours(fn((v[:, 0], v[:, 1], v[:, 2])))
-        if TEXT_BOUNDS is not None:
-            lo, hi = TEXT_BOUNDS
-            on_text = np.all((v >= lo - 0.05) & (v <= hi + 0.05), axis=1) & (v[:, 2] > 9.05)
-            c[on_text] = (0.10, 0.07, 0.05)
-        return c
-    return colour
+# --- colour -----------------------------------------------------------------
+def mesh_arrays(m):
+    mesh = m.to_mesh()
+    v = np.asarray(mesh.vert_properties)[:, :3].astype(np.float64)
+    f = np.asarray(mesh.tri_verts).astype(np.int64)
+    return v, f, np.asarray(trimesh.Trimesh(v, f, process=False).vertex_normals)
+
+
+PAINTED = {"body_left": left, "body_right": right, "refill_lid": lid, "head": head,
+           **{f"tray_{c}": trays[c] for c in P.CANDY}}
+colours = {}
+full, multi = os.path.join(args.out, "colour", "full"), os.path.join(args.out, "colour", "multi")
+filament_use = {}
+for name, m in PAINTED.items():
+    v, f, n = mesh_arrays(m)
+    if name == "head":
+        rich, clean = paint.head_colours(v, n), paint.head_colours(v, n, weather=False)
+    else:
+        rich = paint.body_colours(v, n, TEXT_BOUNDS)
+        clean = paint.body_colours(v, n, TEXT_BOUNDS, weather=False)
+    colours[name] = rich
+    colour_export.write_3mf(f"{full}/{name}.3mf", v, f, rich, name=f"Clive {name}")
+    save_ply(m, f"{full}/{name}.ply", color_fn=lambda _v, rich=rich: rich)
+    for k, cnt in colour_export.write_obj_palette(f"{multi}/{name}.obj", v, f, clean).items():
+        filament_use[k] = filament_use.get(k, 0) + cnt
+    say(f"painted {name}: {len(v)} vertices")
+report["filaments_used"] = {k: n for k, n in filament_use.items() if n}
+if args.texture:
+    import subprocess
+    import sys
+    plys = [f"{full}/{n}.ply" for n in PAINTED]
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "bake_texture.py"), full] + plys, check=True)
+    say("baked textured OBJs")
 
 
 ply = os.path.join(args.out, "ply")
-MECH = {"lever": (0.92, 0.75, 0.20), "tray": (0.95, 0.93, 0.88), "sleeve": (0.55, 0.75, 0.95), "pin": (0.6, 0.6, 0.62)}
+MECH = {"lever": (0.92, 0.75, 0.20), "tray": (0.95, 0.93, 0.88), "sleeve": (0.20, 0.32, 0.62), "pin": (0.6, 0.6, 0.62)}
 CANDY_COLOURS = [(0.98, 0.55, 0.70), (0.98, 0.85, 0.30), (0.98, 0.60, 0.35)]
 
 
@@ -241,30 +271,19 @@ def candy_solid(c):
     return mf.Manifold.batch_hull(corners)
 
 
-def untilt(v, a):
-    """Undo a head tilt on global vertex positions (for colouring)."""
-    x, u, w = P.to_torso((v[:, 0], v[:, 1], v[:, 2]))
-    t = math.radians(a)
-    ru, rv = u - P.PIVOT_U, w - P.PIVOT_V
-    u2 = P.PIVOT_U + ru * math.cos(t) - rv * math.sin(t)
-    v2 = P.PIVOT_V + ru * math.sin(t) + rv * math.cos(t)
-    return np.stack(P.from_torso(x, u2, v2), axis=1)
-
-
 for pose, a in (("rest", 0.0), ("open", D.theta)):
     s = D.tray_shift(a)
     tilt = lambda m: g(M.tilt(M.to_torso_frame(m), a))
     shift = lambda m: m.translate((0, s * P.CA, -s * P.SA))
     for side, m in (("left", left), ("right", right)):
-        save_ply(m, f"{ply}/{pose}_body_{side}.ply", paint(gnome.body_regions))
-    save_ply(lid, f"{ply}/{pose}_lid.ply", paint(gnome.body_regions))
-    save_ply(tilt(head), f"{ply}/{pose}_head.ply", lambda v: paint(gnome.head_regions)(untilt(v, a)))
+        save_ply(m, f"{ply}/{pose}_body_{side}.ply", color_fn=lambda _v, side=side: colours[f"body_{side}"])
+    save_ply(lid, f"{ply}/{pose}_lid.ply", color_fn=lambda _v: colours["refill_lid"])
+    save_ply(tilt(head), f"{ply}/{pose}_head.ply", color_fn=lambda _v: colours["head"])
     save_ply(tilt(lever), f"{ply}/{pose}_lever.ply", color=MECH["lever"])
     save_ply(tilt(pin), f"{ply}/{pose}_pin.ply", color=MECH["pin"])
     save_ply(axle, f"{ply}/{pose}_axle.ply", color=MECH["pin"])
     save_ply(g(D.spring_coil(a)), f"{ply}/{pose}_spring.ply", color=(0.75, 0.76, 0.80))
-    save_ply(shift(trays["pez"]), f"{ply}/{pose}_tray.ply",
-             lambda v: paint(gnome.body_regions)(v - np.array([0, s * P.CA, -s * P.SA])))
+    save_ply(shift(trays["pez"]), f"{ply}/{pose}_tray.ply", color_fn=lambda _v: colours["tray_pez"])
     save_ply(sleeves["pez"], f"{ply}/{pose}_sleeve.ply", color=MECH["sleeve"])
     # Candies: one in the pocket, the rest stacked in the hopper.
     t = P.CANDY["pez"]["thick"]
