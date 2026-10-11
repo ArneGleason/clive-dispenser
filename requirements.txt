@@ -1,0 +1,6 @@
+numpy
+scikit-image
+trimesh
+manifold3d
+fast-simplification
+bpy

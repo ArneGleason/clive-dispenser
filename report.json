@@ -1,0 +1,155 @@
+{
+  "travel_mm": 18.2,
+  "head_tilt_deg": 32.9,
+  "checks": [
+    {
+      "name": "candy fit: pez",
+      "ok": true,
+      "detail": "pez: bore 15.6 x 8.6, pocket depth 5.3, anti-tumble margin 0.8 mm"
+    },
+    {
+      "name": "candy fit: tictac",
+      "ok": true,
+      "detail": "tictac: bore 12.6 x 8.1, pocket depth 5.8, anti-tumble margin 1.2 mm"
+    },
+    {
+      "name": "solid is watertight: body",
+      "ok": true,
+      "detail": "volume 197.5 cm3, genus 7"
+    },
+    {
+      "name": "solid is watertight: left half",
+      "ok": true,
+      "detail": "volume 99.0 cm3, genus 3"
+    },
+    {
+      "name": "solid is watertight: right half",
+      "ok": true,
+      "detail": "volume 98.6 cm3, genus 5"
+    },
+    {
+      "name": "solid is watertight: head",
+      "ok": true,
+      "detail": "volume 28.4 cm3, genus 4"
+    },
+    {
+      "name": "solid is watertight: lever",
+      "ok": true,
+      "detail": "volume 2.2 cm3, genus 2"
+    },
+    {
+      "name": "solid is watertight: lid",
+      "ok": true,
+      "detail": "volume 3.2 cm3, genus 0"
+    },
+    {
+      "name": "solid is watertight: tray pez",
+      "ok": true,
+      "detail": "volume 6.5 cm3, genus 2"
+    },
+    {
+      "name": "solid is watertight: tray tictac",
+      "ok": true,
+      "detail": "volume 6.6 cm3, genus 2"
+    },
+    {
+      "name": "solid is watertight: sleeve pez",
+      "ok": true,
+      "detail": "volume 2.6 cm3, genus 1"
+    },
+    {
+      "name": "solid is watertight: sleeve tictac",
+      "ok": true,
+      "detail": "volume 3.8 cm3, genus 1"
+    },
+    {
+      "name": "no collision through full travel: lever/body",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: head/body",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: tray/body",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: pin/body",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: tray/sleeve",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: lever/sleeve",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: lever/tray",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: pin/tray",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: head/tray",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "no collision through full travel: lid/lever",
+      "ok": true,
+      "detail": "max overlap 0.000 mm3"
+    },
+    {
+      "name": "pocket fully outside at full travel: pez",
+      "ok": true,
+      "detail": "overlap 0.00 mm3"
+    },
+    {
+      "name": "pocket fully outside at full travel: tictac",
+      "ok": true,
+      "detail": "overlap 0.00 mm3"
+    },
+    {
+      "name": "walls around the mechanism",
+      "ok": true,
+      "detail": "thinnest wall 1.39 mm"
+    }
+  ],
+  "spring": {
+    "rest_length": 15.0,
+    "pressed_length": 10.399682666395588,
+    "recommended_free_length": [
+      18.0,
+      23.0
+    ],
+    "max_od": 4.5
+  },
+  "capacity": {
+    "pez": 8,
+    "tictac": 7
+  },
+  "all_ok": true,
+  "filaments_used": {
+    "red": 105849,
+    "blue": 355782,
+    "skin": 135850,
+    "white": 82815,
+    "brown": 30339,
+    "black": 17985,
+    "stone": 247232,
+    "gold": 3522
+  }
+}
