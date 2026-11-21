@@ -1,6 +1,71 @@
-# Clive, the Cheeky Candy Dispenser
+# Clive, the Cheeky Candy Dispenser · Agent Sculpt Relay
 
-*He's naughty but nice.* Push Clive's head forward and a sweet pops out of his bum.
+*He’s naughty, mischievous, and currently being sculpted in a public relay by AI agents (and any human sculptor who wants a turn).*
+
+**The goal:** Turn one approved ceramic turnaround into a cheeky mooning garden gnome you’d genuinely want to 3D-print and put on a shelf — even in unpainted plastic. Once Clive’s likeness, expression, and pose earn the nod, we’ll marry the winning exterior to the mechanical dispenser below so tipping his head forward pops a Tic Tac or Pez out of his bum.
+
+[![Clive’s approved front, side, and back turnaround](character-sculpt/references/clive-turnaround.png)](character-sculpt/references/clive-turnaround.png)
+
+> **Visual target:** [Open the original turnaround PNG](https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png) (`character-sculpt/references/clive-turnaround.png`). Every sculpt turn measures itself against this sheet — not earlier model renders.
+
+[Browse the sculpt gallery](character-sculpt/gallery/README.md) · [Read the experiment log](character-sculpt/LOG.md) · [Open hypotheses & discussion (Issue #3)](https://github.com/ArneGleason/clive-dispenser/issues/3) · [Copy the agent prompt](#give-an-agent-a-turn)
+
+---
+
+## The relay so far
+
+Each turn builds on the shared lab notes, tests or challenges a prior hypothesis, renders matched clay comparisons (`character-sculpt/tools/review_views.py`), and leaves honest observations — including failed ideas and the least convincing angle — for the next contributor.
+
+| Description-only baseline | Subdivision cage | Multires refinement *(baseline)* | Turnaround pose & continuous face *(latest)* |
+|---|---|---|---|
+| [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) |
+| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* |
+
+### Latest matched clay comparison (parent left vs. latest turn right)
+
+Both columns use identical neutral clay, lighting, and orthographic framing so geometry speaks without paint:
+
+| Close-up expression (front & low 3/4) | Full figure (front, low 3/4, side & weakest `rear_high`) |
+|---|---|
+| [![Matched clay face comparison](experiments/2026-11-21-turnaround-pose-face/Comparison-Face-Clay.jpg)](experiments/2026-11-21-turnaround-pose-face/README.md) | [![Matched 4-angle clay comparison](experiments/2026-11-21-turnaround-pose-face/Comparison-Clay.jpg)](experiments/2026-11-21-turnaround-pose-face/README.md) |
+
+### What’s up for grabs next
+
+Arne’s latest critique ([`character-sculpt/HYPOTHESES.md`](character-sculpt/HYPOTHESES.md) · [GitHub Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)) points straight to the next big leap:
+
+1. **Real trouser topology** — Clive’s lowered pants still read as stacked rings and a separate waistband rather than a recognizable, continuous two-legged pair of pants pulled down and stretched between his hands.
+2. **Physical contact instead of blind interpenetration** — separate 3D parts (especially **hat vs. hair brim**, **pants vs. seat/hands**, and **smock vs. sleeves/hips**) push through one another instead of compressing, wrapping, and reacting to each other.
+3. **“Goals from two directions”** — try meeting in the middle: combine **outside-in** silhouette fitting to `clive-turnaround.png` with **inside-out** anatomical and garment geometry logic (starting from humanoid reference meshes, real bifurcated cloth patterns with Blender Cloth/Shrinkwrap, unified ceramic clay fusion, or a multiview image-to-3D hybrid).
+
+---
+
+## Give an agent a turn
+
+Want to see what your favorite coding or 3D agent can do? Copy the prompt below verbatim into your agent (also stored in plain text at [`character-sculpt/HANDOFF.txt`](character-sculpt/HANDOFF.txt)). Every turn adds an editable candidate, matched comparisons, honest lessons for the next agent, and refreshes this showcase.
+
+```text
+Take a turn at making a better Clive in https://github.com/ArneGleason/clive-dispenser. The goal is a mischievous gnome I’d want to print and put on a shelf. Focus this turn on his likeness, expression, and pose. The dispenser mechanics come later.
+
+Start in character-sculpt/. Read subjects/clive.md, WORKFLOW.md, LOG.md, HYPOTHESES.md, the recent run notes, and any open sculpt discussion issues on GitHub (starting with Issue #3). Use the comparison model named in the log unless I name another parent. Open the approved front, side, and back turnaround at character-sculpt/references/clive-turnaround.png (path from the repository root). If your checkout predates the image, fetch main or open the PNG directly at https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png. Orbit the parent, including high and low three-quarter views. Use your judgment to choose the change with the biggest visual payoff. A previous agent’s suggestion is a hypothesis you can test or challenge.
+
+Make the change with the tools available to you. You can add or subtract volume, refine the cage, start from anatomical/garment reference meshes, use cloth simulation or sculpting, or try a different modeling method altogether. Render the parent and candidate with matched framing and light. Show the angle where your change helped most and the angle where it holds up least.
+
+Contribute your turn to the repo. Save the editable candidate, screenshots, and a run record based on character-sculpt/RUN.md in a new experiments/ directory. Append a short entry to character-sculpt/LOG.md, add your screenshots to the gallery (including its GitHub browsing index), and refresh the root README’s showcase so visitors immediately understand the relay and want to take a turn. Preserve earlier runs and credit any findings you build on. If you have write access, commit the contribution or open a PR; otherwise give me a patch or downloadable handoff.
+
+Leave three things for the next agent: what you observed and from which view; what you discovered by testing, including failed ideas or regressions; and the next improvement you’d try, with a way to tell whether it worked. Link the evidence (and join the back-and-forth on open GitHub issues if relevant). I’ll decide which Clive becomes the next comparison model.
+```
+
+### Lab quick links
+
+- [Character Sculpt Lab overview](character-sculpt/README.md) · [Clive’s subject brief](character-sculpt/subjects/clive.md) · [Refinement workflow](character-sculpt/WORKFLOW.md) · [Run template](character-sculpt/RUN.md)
+- [Browsable sculpt history](character-sculpt/gallery/README.md) · [Shared experiment log](character-sculpt/LOG.md) · [Contact & topology hypotheses](character-sculpt/HYPOTHESES.md) · [Plain-text prompt](character-sculpt/HANDOFF.txt)
+- [Back-and-forth discussion thread (Issue #3)](https://github.com/ArneGleason/clive-dispenser/issues/3)
+
+---
+
+## Mechanical dispenser prototype (Phase 2 engineering baseline)
+
+Once a sculpt earns keeper approval, it will wrap around the working candy-dispenser mechanism developed in the original prototype below.
 
 ![Clive closed, dispensing, and in cutaway](renders/contact_sheet.png)
 
@@ -8,41 +73,13 @@ A printable, mechanical novelty candy dispenser in the spirit of a certain
 famous brick-candy dispenser, but with a mooning garden gnome. Designed for
 **Pez-style bricks** and **Tic Tacs**, and adjustable for any small, flat sweet.
 
-> ## ⚠️ Never printed. Never tested.
-> This model was designed entirely in software. Every part, clearance and
+> ### ⚠️ Never printed. Never tested.
+> This mechanical prototype was designed entirely in software. Every part, clearance and
 > motion was checked in a virtual test (see below), but **no one has printed
 > it yet**. Expect to tune a tolerance or two. If you get it working, please
 > share your print, your fixes and your settings. That's half the fun.
 
-## Approved sculpt reference
-
-[![Clive’s approved front, side, and back turnaround](character-sculpt/references/clive-turnaround.png)](character-sculpt/references/clive-turnaround.png)
-
-[Open the original PNG](https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png). Use this sheet as the likeness target for every sculpt experiment.
-
-## Give an agent a turn
-
-Copy the whole prompt into your agent. Each turn contributes a candidate and a record of what the next contributor can learn from it.
-
-```text
-Take a turn at making a better Clive in https://github.com/ArneGleason/clive-dispenser. The goal is a mischievous gnome I’d want to print and put on a shelf. Focus this turn on his likeness, expression, and pose. The dispenser mechanics come later.
-
-Start in character-sculpt/. Read subjects/clive.md, WORKFLOW.md, LOG.md, and the recent run notes. Use the comparison model named in the log unless I name another parent. Open the approved front, side, and back turnaround at character-sculpt/references/clive-turnaround.png (path from the repository root). If your checkout predates the image, fetch main or open the PNG directly at https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png. Orbit the parent, including high and low three-quarter views. Use your judgment to choose the change with the biggest visual payoff. A previous agent’s suggestion is a hypothesis you can test or challenge.
-
-Make the change with the tools available to you. You can add or subtract volume, refine the cage, or try a different modeling method. Render the parent and candidate with matched framing and light. Show the angle where your change helped most and the angle where it holds up least.
-
-Contribute your turn to the repo. Save the editable candidate, screenshots, and a run record based on character-sculpt/RUN.md in a new experiments/ directory. Append a short entry to character-sculpt/LOG.md and add your screenshots to the gallery, including its GitHub browsing index. Preserve earlier runs and credit any findings you build on. If you have write access, commit the contribution or open a PR; otherwise give me a patch or downloadable handoff.
-
-Leave three things for the next agent: what you observed and from which view; what you discovered by testing, including failed ideas or regressions; and the next improvement you’d try, with a way to tell whether it worked. Link the evidence. I’ll decide which Clive becomes the next comparison model.
-```
-
-[Browse the sculpt history](character-sculpt/gallery/README.md) · [Read the shared experiment log](character-sculpt/LOG.md) · [Open the plain-text prompt](character-sculpt/HANDOFF.txt)
-
-## Character sculpt experiments
-
-[Browse the interactive sculpt history](character-sculpt/gallery/README.md) or start at the [Character Sculpt Lab](character-sculpt/README.md) for the current comparison model, experiment log, reusable workflow, and handoff prompt.
-
-## How it works
+### How it works
 
 1. Candies stack in a hopper tube inside Clive's back.
 2. The bottom candy drops into a pocket in a sliding tray at his hips.
@@ -53,7 +90,7 @@ Leave three things for the next agent: what you observed and from which view; wh
 4. Let go and a small spring (a ballpoint-pen spring works) pulls everything
    back. The next candy drops into the pocket.
 
-## Parts to print
+### Parts to print
 
 Single-colour print files are in `stl/`. Colour versions are in `colour/` (see
 [Colour printing](#colour-printing)).
@@ -72,7 +109,7 @@ Suggested settings: 0.12 mm layers (0.08 mm brings out the face and beard), 0.4 
 nozzle or finer, 3 perimeters, 15% infill, PLA or PETG. Resin printers handle the
 detail best. Leave the default clearances and sand the sliding faces lightly.
 
-## Hardware
+### Hardware
 
 - **Axle:** 22 mm of 3 mm rod, an M3 × 22 screw with its head cut off, or the printed axle.
 - **Tray pin:** 12 mm of 3 mm rod, or the printed pin.
@@ -80,7 +117,7 @@ detail best. Leave the default clearances and sand the sliding faces lightly.
 - **Dowels:** four 12 mm pieces of 1.75 mm filament to line up the body halves.
 - Glue: CA (superglue) for the head-to-lever joint and the body halves.
 
-## Assembly
+### Assembly
 
 1. Push the axle through the lever's top hole. Seat one end in the left body half.
 2. Put the pin through the lever's lower hole, then drop the tray in so the pin sits in the slots of the tray's two upright cheeks.
@@ -89,7 +126,7 @@ detail best. Leave the default clearances and sand the sliding faces lightly.
 5. Glue the halves, then glue the head onto the lever's post with the head upright.
 6. Drop the hopper in from the back, flange up, so it hangs from its ledge. Fill it with candies **lying flat** and press on the lid.
 
-## Colour printing
+### Colour printing
 
 Clive comes with a full paint job, computed from the same shapes that make
 the model, so it lines up exactly. It includes:
@@ -112,14 +149,14 @@ hidden inside, so print them in any colour.
 Rebuilding also writes the painted meshes as vertex-coloured PLYs
 (`out/colour/full/*.ply`). They open straight into Blender or MeshLab.
 
-## Food safety
+### Food safety
 
 FDM layer lines trap crumbs and bacteria, and most resins are not food-safe
 when printed. Either use **wrapped** sweets, or print the tray and hopper in a
 food-contact-rated filament and give them a food-safe coating. This is a novelty,
 not a food-grade product.
 
-## The virtual test
+### The virtual test
 
 `src/build.py` rebuilds every part and then checks, numerically:
 
@@ -136,14 +173,14 @@ Thinnest wall around the mechanism: 1.39 mm.
 What the virtual test *can't* tell you: friction, print tolerances, how sticky
 the candy is, or whether a slightly rough hopper bore jams. Those need a real print.
 
-## Other candies
+### Other candies
 
 Edit the `CANDY` table in `src/params.py`: length, width and thickness of
 *your* candy, measured with calipers. Rebuild, and the hopper bore and tray pocket
 follow. The build refuses designs where the candy could tumble in the tube.
 Anything up to about 15.6 × 8.6 × 5.5 mm fits the existing body.
 
-## Rebuilding
+### Rebuilding
 
 ```bash
 pip install -r requirements.txt                 # numpy, scikit-image, trimesh, manifold3d, bpy
