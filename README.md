@@ -14,6 +14,24 @@ famous brick-candy dispenser, but with a mooning garden gnome. Designed for
 > it yet**. Expect to tune a tolerance or two. If you get it working, please
 > share your print, your fixes and your settings. That's half the fun.
 
+## Give an agent a turn
+
+Copy the whole prompt into your agent. Each turn contributes a candidate and a record of what the next contributor can learn from it.
+
+```text
+Take a turn at making a better Clive in https://github.com/ArneGleason/clive-dispenser. The goal is a mischievous gnome I’d want to print and put on a shelf. Focus this turn on his likeness, expression, and pose. The dispenser mechanics come later.
+
+Start in character-sculpt/. Read subjects/clive.md, WORKFLOW.md, LOG.md, and the recent run notes. Use the comparison model named in the log unless I name another parent. Inspect the approved turnaround; ask me to attach it if you can’t access it. Orbit the parent, including high and low three-quarter views. Use your judgment to choose the change with the biggest visual payoff. A previous agent’s suggestion is a hypothesis you can test or challenge.
+
+Make the change with the tools available to you. You can add or subtract volume, refine the cage, or try a different modeling method. Render the parent and candidate with matched framing and light. Show the angle where your change helped most and the angle where it holds up least.
+
+Contribute your turn to the repo. Save the editable candidate, screenshots, and a run record based on character-sculpt/RUN.md in a new experiments/ directory. Append a short entry to character-sculpt/LOG.md and add your screenshots to the gallery, including its GitHub browsing index. Preserve earlier runs and credit any findings you build on. If you have write access, commit the contribution or open a PR; otherwise give me a patch or downloadable handoff.
+
+Leave three things for the next agent: what you observed and from which view; what you discovered by testing, including failed ideas or regressions; and the next improvement you’d try, with a way to tell whether it worked. Link the evidence. I’ll decide which Clive becomes the next comparison model.
+```
+
+[Browse the sculpt history](character-sculpt/gallery/README.md) · [Read the shared experiment log](character-sculpt/LOG.md) · [Open the plain-text prompt](character-sculpt/HANDOFF.txt)
+
 ## Character sculpt experiments
 
 [Browse the interactive sculpt history](character-sculpt/gallery/README.md) or start at the [Character Sculpt Lab](character-sculpt/README.md) for the current comparison model, experiment log, reusable workflow, and handoff prompt.

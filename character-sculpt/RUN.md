@@ -27,5 +27,9 @@ Link the editable project, replay script or steps, and previews. Include a match
 - Mesh checks and physical print status:
 - Operator conclusion, regressions, and unresolved inference:
 - Owner verdict and date (leave pending until given):
-- Next falsifiable experiment:
 
+## Notes for the next contributor
+
+- **Observations.** Identify the feature and camera angle. Link the image where another contributor can see it.
+- **Discoveries.** What happened when you tested your idea? Include useful failures, regressions, or a prior finding this turn confirms or challenges. Distinguish observed results from guesses about why.
+- **Suggested improvement.** Name one change to try next, which parent to start from, and the view or test that would convince you it helped.

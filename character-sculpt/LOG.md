@@ -20,3 +20,7 @@ The left column is the subdivision study. The right column is the multires refin
 Take the multires face through one addition-and-subtraction cycle. Add cheek volume that carries the winking lower lid upward, then subtract any ridge that makes the moustache appear stuck on. Keep the nose projection and grin readable from the low three-quarter view. If the cheek reads better only from the front, log the regression and keep the parent as the comparison model. An independent image-to-3D or hybrid run can branch from the same source sheet.
 
 Append future runs with a unique directory, parent revision, evidence, and owner verdict. An operator may propose a new comparison model; record who selected it and why.
+
+### Contributor turns
+
+Append a dated entry for each new turn. Link the run record, parent revision, candidate, and comparison images. Give one sentence each for **observations**, **discoveries**, and **suggested improvement** so the next contributor can choose a direction from the log. Keep competing candidates and failed experiments discoverable.
