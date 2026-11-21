@@ -12,4 +12,4 @@ Rounded forms established a static figure with a wink, a folded cap, and lowered
 
 Arne found the likeness too distant. This run gives later experiments a description-only baseline.
 
-[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md)
+[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md) · [Turnaround pose & continuous face](poseface-1.md)

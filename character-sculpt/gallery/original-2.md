@@ -12,4 +12,4 @@ The first Clive paired a procedural figure with a head lever, hopper, and slidin
 
 Virtual assembly and motion checks established a mechanical starting point. A physical print is still pending.
 
-[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md)
+[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md) · [Turnaround pose & continuous face](poseface-1.md)

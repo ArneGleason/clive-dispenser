@@ -94,5 +94,40 @@ const studies = [
         "Parent and candidate in matching clay"
       ]
     ]
+  },
+  {
+    "id": "poseface",
+    "title": "Turnaround pose & continuous face",
+    "date": "November 21, 2026",
+    "method": "Continuous quad Multires + SDF projection",
+    "change": "Overlaying the parent onto the approved turnaround exposed a 9–10 mm head/hand lean offset and isolated cheek inset seams. Rebuilt with a continuous Multires L3 quad face, bulbous strawberry nose, arched smile-wink, sculpted iris for unpainted clay, and vertical arms gripping a unified trouser waistband.",
+    "finding": "Front, side, and low three-quarter likeness, expression, and hand-to-waistband solidity improved substantially. Elevated rear oblique views still show segmented behind-ear nape tubes and a recessed hip-flank step; owner verdict pending.",
+    "path": "experiments/2026-11-21-turnaround-pose-face",
+    "images": [
+      [
+        "../../experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg",
+        "Studio portrait"
+      ],
+      [
+        "../../experiments/2026-11-21-turnaround-pose-face/Face-Portrait.jpg",
+        "Face detail"
+      ],
+      [
+        "../../experiments/2026-11-21-turnaround-pose-face/Comparison-Face-Clay.jpg",
+        "Matched clay face comparison (parent left, candidate right)"
+      ],
+      [
+        "../../experiments/2026-11-21-turnaround-pose-face/Rear-High.jpg",
+        "Elevated rear view (least convincing angle)"
+      ],
+      [
+        "../../experiments/2026-11-21-turnaround-pose-face/Angles.jpg",
+        "Six-angle inspection"
+      ],
+      [
+        "../../experiments/2026-11-21-turnaround-pose-face/Comparison-Clay.jpg",
+        "Matched parent and candidate clay views (front, low 3/4, side, high rear)"
+      ]
+    ]
   }
 ];
