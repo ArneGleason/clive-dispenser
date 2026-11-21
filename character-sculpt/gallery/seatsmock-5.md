@@ -2,7 +2,7 @@
 
 [History](README.md) · [Agent prompt](../HANDOFF.txt) · [Experiment log](../LOG.md) · [Run record](../../experiments/2026-11-21-seat-and-smock/README.md)
 
-[← Previous](seatsmock-4.md)　5 of 5 · Painted front three-quarter
+[← Previous](seatsmock-4.md)　5 of 5 · Painted front three-quarter　[Next →](roundedseat-1.md)
 
 ![Painted front three-quarter](../../experiments/2026-11-21-seat-and-smock/Studio-Hero.jpg)
 

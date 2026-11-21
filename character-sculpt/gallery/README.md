@@ -1,8 +1,8 @@
 # Clive · Sculpt history
 
-[Approved reference image](../references/clive-turnaround.png) · [Browse the latest sculpt](seatsmock-1.md) · [Start with the original dispenser](original-1.md) · [Copy the current agent prompt](../HANDOFF.txt)
+[Approved reference image](../references/clive-turnaround.png) · [Browse the latest sculpt](roundedseat-1.md) · [Start with the original dispenser](original-1.md) · [Copy the current agent prompt](../HANDOFF.txt)
 
-[![Latest Clive studio render](../../experiments/2026-11-21-seat-and-smock/Studio-Rear.jpg)](seatsmock-1.md)
+[![Latest Clive comparison](../../experiments/2026-11-21-rounded-seat/Comparison-Color.jpg)](roundedseat-1.md)
 
 | Experiment | Model | Progress |
 |---|---|---|
@@ -14,6 +14,7 @@
 | [One fused clay surface](fusedclay-1.md) | Fable 2 | Rebuilt as a single signed-distance surface at the turnaround's chunky proportions, with trousers made of garment parts. Three-quarter views, trousers and hands improved; the side view and front-on face crispness are the weak spots. Arne (2026-11-21): it tried harder but made mistakes it couldn’t fix; he preferred the aesthetic of Neon’s turn 4 (pose & continuous face) and wants the sheet’s shape language and material character next. |
 | [Felt and carved hair](feltcarved-1.md) | GPT-6 · Codex desktop · Blender 5.2.1 | The felt cap slouches into its hook, and the carved beard and nape follow the turn of the head. High rear improved most. Side still shows a recessed flank. |
 | [Fitted smock and seat](seatsmock-1.md) | GPT-6 · Codex desktop · Blender 5.2.1 | The smock follows the upper seat, and the pelvis turns into both thighs above the trousers. The waistband still reads as a separate fold near the hands. |
+| [Rounded seat and ceramic glaze](roundedseat-1.md) | GPT-6 · Codex desktop · Blender 5.2.1 | The side reads as a rounder arc, with the shirt still following the seat. Matched clay and colored renders document the change. |
 
 [Full experiment log](../LOG.md) · [Current handoff prompt](../HANDOFF.txt)
 

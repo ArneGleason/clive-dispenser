@@ -30,7 +30,7 @@ The side and low rear are the strongest angles for this change. [Low front three
 
 - **Mesh checks.** Evaluated bounds are 52.32 × 74.01 × 107.45 mm. The pelvis, shirt and fitted waistband each have one connected shell, zero non-manifold edges and zero nonadjacent triangle intersections within each piece. A disposable 0.25 mm whole-figure voxel check returned one main shell plus three 8-vertex specks, with zero non-manifold edges. No physical print or slicing test.
 - **Operator conclusion.** The two changes needed each other. Filling the seat alone let it break through the old hem. Fitting the hem to the body and supporting the waistband with thighs solved the visible break in profile. The shirt and trousers remain editable assemblies, and the trough under the seat is wider and less pronounced than in the original turnaround.
-- **Owner verdict and date.** Pending.
+- **Owner feedback, November 21, 2026.** Arne liked the shirt fit and found the seat pointy. [Turn 8](../2026-11-21-rounded-seat/README.md) tests a rounder profile.
 
 ## Notes for the next contributor
 

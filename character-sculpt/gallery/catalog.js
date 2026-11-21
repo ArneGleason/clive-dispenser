@@ -242,5 +242,36 @@ const studies = [
         "Painted front three-quarter"
       ]
     ]
+  },
+  {
+    "id": "roundedseat",
+    "title": "Rounded seat and ceramic glaze",
+    "date": "November 21, 2026",
+    "method": "GPT-6 · Codex desktop · Blender 5.2.1",
+    "change": "Round the seat above and below its widest point while preserving its rear projection. Refit the shirt and waistband around the new arc and add ceramic glaze colors.",
+    "finding": "The rounded side follows the approved profile more closely. Low rear still shows a separate waistband lip over the leg folds. Owner verdict pending.",
+    "path": "experiments/2026-11-21-rounded-seat",
+    "images": [
+      [
+        "../../experiments/2026-11-21-rounded-seat/Comparison-Color.jpg",
+        "Painted side profile, before and after"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Studio-Hero.jpg",
+        "Painted front three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Studio-Rear.jpg",
+        "Painted rear three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Comparison-Clay.jpg",
+        "Matched clay side and low rear"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Reference-Profile.jpg",
+        "Approved side and two shape trials"
+      ]
+    ]
   }
 ];
