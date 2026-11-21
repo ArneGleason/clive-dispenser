@@ -211,5 +211,36 @@ const studies = [
         "Three stages of the cap and rim"
       ]
     ]
+  },
+  {
+    "id": "seatsmock",
+    "title": "Fitted smock and seat",
+    "date": "November 21, 2026",
+    "method": "GPT-6 · Codex desktop · Blender 5.2.1",
+    "change": "Started from turn 6 to answer the owner’s note about the gap at the hips. One pelvis cage flows into both thighs. The shirt hem and lowered waistband follow that anatomy.",
+    "finding": "Side and low rear improved most. The cloth bands still read separately near the grip from low front. Owner verdict pending.",
+    "path": "experiments/2026-11-21-seat-and-smock",
+    "images": [
+      [
+        "../../experiments/2026-11-21-seat-and-smock/Studio-Rear.jpg",
+        "Painted rear three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-seat-and-smock/Comparison-Clay.jpg",
+        "Matched side and low rear views"
+      ],
+      [
+        "../../experiments/2026-11-21-seat-and-smock/Fit-Test.jpg",
+        "Same seat with unfitted and fitted hems"
+      ],
+      [
+        "../../experiments/2026-11-21-seat-and-smock/Front-Low.jpg",
+        "Least convincing angle · low front"
+      ],
+      [
+        "../../experiments/2026-11-21-seat-and-smock/Studio-Hero.jpg",
+        "Painted front three-quarter"
+      ]
+    ]
   }
 ];

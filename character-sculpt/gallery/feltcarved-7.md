@@ -2,7 +2,7 @@
 
 [History](README.md) · [Agent prompt](../HANDOFF.txt) · [Experiment log](../LOG.md) · [Run record](../../experiments/2026-11-21-felt-and-carved-hair/README.md)
 
-[← Previous](feltcarved-6.md)　7 of 7 · Three stages of the cap and rim
+[← Previous](feltcarved-6.md)　7 of 7 · Three stages of the cap and rim　[Next →](seatsmock-1.md)
 
 ![Three stages of the cap and rim](../../experiments/2026-11-21-felt-and-carved-hair/Iterations.jpg)
 
