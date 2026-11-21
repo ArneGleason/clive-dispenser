@@ -18,14 +18,15 @@
 
 Each turn builds on the shared lab notes, tests or challenges a prior hypothesis, renders matched clay comparisons (`character-sculpt/tools/review_views.py`), and leaves honest observations — including failed ideas and the least convincing angle — for the next contributor.
 
-| 1 · Description only | 2 · Subdivision cage | 3 · Multires refinement *(comparison model)* | 4 · Turnaround pose & continuous face | 5 · One fused clay surface *(latest)* |
+| 1 · Description only | 2 · Subdivision cage | 3 · Multires refinement | 4 · Turnaround pose & continuous face | 5 · One fused clay surface *(latest)* |
 |---|---|---|---|---|
 | [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) | [![One fused clay surface](experiments/2026-11-21-fused-clay-sdf/Studio-Hero.jpg)](character-sculpt/gallery/fusedclay-1.md) |
-| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* | Rebuilt as a single surface at the sheet's chunky proportions, trousers made of garment parts. Verdict pending. |
+| *model not recorded* | *model not recorded* | *model not recorded* | **Neon**, in Antigravity | **Fable 2** (Claude Fable 5.2), in Claude Code |
+| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* | Rebuilt as a single surface at the sheet's chunky proportions, trousers made of garment parts. *"Tried harder, made some mistakes that it couldn't fix."* |
 
 ### Latest matched clay comparison
 
-Same neutral clay, light and orthographic frame in every column, so geometry speaks without paint. Left to right: the comparison model, the previous turn, the latest turn.
+Same neutral clay, light and orthographic frame in every column, so geometry speaks without paint. Left to right: turn 3, turn 4, turn 5.
 
 | Whole figure, from the angle that improved most down to the one that holds up least | Face |
 |---|---|
@@ -35,11 +36,12 @@ The latest turn answered Arne’s two structural critiques head-on ([contact tes
 
 ### What’s up for grabs next
 
-There are now two live branches, and Arne hasn’t picked between them ([log](character-sculpt/LOG.md) · [hypotheses and results](character-sculpt/HYPOTHESES.md) · [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)):
+Arne’s verdict after five turns ([brief](character-sculpt/subjects/clive.md#shape-language--owner-guidance-2026-11-21) · [hypotheses and results](character-sculpt/HYPOTHESES.md) · [log](character-sculpt/LOG.md) · [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)): every model so far puts the parts in roughly the right places and still misses what makes the sheet attractive. On aesthetics he preferred Neon’s turn 4 (pose & continuous face) to the latest one.
 
-1. **Fix the fused branch’s side view.** Measured against the sheet, the body overshot (sleeves, trouser pool and boots are 15–50% too big), so the head reads small; the cap hook is short and stiff and the legs crouch. Every landmark is a named millimetre coordinate in [`sculpt_clive.py`](experiments/2026-11-21-fused-clay-sdf/sculpt_clive.py), and a full rebuild takes seconds.
-2. **Give him the sheet’s face.** Turn 4 has the crisper wink; turn 5 has the better cheek-to-beard flow. Nobody has yet made the round, warm open eye and the wide crooked grin read in unpainted clay at thumbnail size.
-3. **Try what hasn’t been tried.** A posed humanoid base mesh, a real cloth simulation for the trouser folds, or a multiview image-to-3D base are all still untested. Any of them could beat both branches.
+1. **Shape language.** Look at the cap on the sheet. The rim is not a ring: it arches over the brow, falls over the temples and behind the ears, and settles at the nape, and the folds spiral up into the hook as lines you could draw. The beard does the same in all three dimensions. So far the models’ curves run along one axis.
+2. **Material character.** The cap should feel like worn felt, the boots like stiff leather, the skin like one rounded organic surface, and the hair carved the way Greek and Roman sculptors carved it.
+3. **Interpret, don’t trace.** The sheet is three image-generated views that each look good and probably don’t agree. Bring one consistent set of shape rules and apply it everywhere.
+4. **Start wherever you like.** Pick any saved Clive as your starter, or start fresh, and say why. Turn 4 has the crisper face and an editable cage. Turn 5 has recognizable trousers and clean seams in a script that rebuilds in seconds, and a weak side view. A posed humanoid base, a real cloth simulation and image-to-3D are all still untested.
 
 ---
 
@@ -48,15 +50,15 @@ There are now two live branches, and Arne hasn’t picked between them ([log](ch
 Want to see what your favorite coding or 3D agent can do? Copy the prompt below verbatim into your agent (also stored in plain text at [`character-sculpt/HANDOFF.txt`](character-sculpt/HANDOFF.txt)). Every turn adds an editable candidate, matched comparisons, honest lessons for the next agent, and refreshes this showcase.
 
 ```text
-Take a turn at making a better Clive in https://github.com/ArneGleason/clive-dispenser. The goal is a mischievous gnome I’d want to print and put on a shelf. Focus this turn on his likeness, expression, and pose. The dispenser mechanics come later.
+Take a turn at making a better Clive in https://github.com/ArneGleason/clive-dispenser. The goal is a mischievous gnome I’d want to print and put on a shelf. Focus this turn on his likeness, expression, and pose, and above all on the shape language and material character described in subjects/clive.md. The dispenser mechanics come later.
 
-Start in character-sculpt/. If you are working locally, reuse an existing checkout of clive-dispenser in your active workspace or default project directory (fetching and pulling main if clean) before cloning a fresh copy. Read subjects/clive.md, WORKFLOW.md, LOG.md, HYPOTHESES.md, the recent run notes, and any open sculpt discussion issues on GitHub (starting with Issue #3). Use the comparison model named in the log unless I name another parent. Open the approved front, side, and back turnaround at character-sculpt/references/clive-turnaround.png (path from the repository root). If your checkout predates the image, fetch main or open the PNG directly at https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png. Orbit the parent, including high and low three-quarter views. Use your judgment to choose the change with the biggest visual payoff. A previous agent’s suggestion is a hypothesis you can test or challenge.
+Start in character-sculpt/. If you are working locally, reuse an existing checkout of clive-dispenser in your active workspace or default project directory (fetching and pulling main if clean) before cloning a fresh copy. Read subjects/clive.md, WORKFLOW.md, LOG.md, HYPOTHESES.md, the recent run notes, and any open sculpt discussion issues on GitHub (starting with Issue #3). Look through every saved Clive in the log and gallery and choose your own starting point (any earlier model, or a fresh start); say which you chose and why. Open the approved front, side, and back turnaround at character-sculpt/references/clive-turnaround.png (path from the repository root). If your checkout predates the image, fetch main or open the PNG directly at https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png. Orbit your starting model, including high and low three-quarter views. Use your judgment to choose the change with the biggest visual payoff. A previous agent’s suggestion is a hypothesis you can test or challenge.
 
 Make the change with the tools available to you. You can add or subtract volume, refine the cage, start from anatomical/garment reference meshes, use cloth simulation or sculpting, or try a different modeling method altogether. Render the parent and candidate with matched framing and light. Show the angle where your change helped most and the angle where it holds up least.
 
-Contribute your turn to the repo. Save the editable candidate, screenshots, and a run record based on character-sculpt/RUN.md in a new experiments/ directory. Append a short entry to character-sculpt/LOG.md, add your screenshots to the gallery (including its GitHub browsing index), and refresh the root README’s showcase so visitors immediately understand the relay and want to take a turn. Preserve earlier runs and credit any findings you build on. If you have write access, commit the contribution or open a PR; otherwise give me a patch or downloadable handoff.
+Contribute your turn to the repo. Save the editable candidate, screenshots, and a run record based on character-sculpt/RUN.md in a new experiments/ directory. Append a short entry to character-sculpt/LOG.md, add your screenshots to the gallery (including its GitHub browsing index), and refresh the root README’s showcase so visitors immediately understand the relay and want to take a turn. Sign your turn: put your model’s name, and the app you ran in, in the run record, the log’s turn roster, the gallery and the README table. Preserve earlier runs and credit any findings you build on. If you have write access, commit the contribution or open a PR; otherwise give me a patch or downloadable handoff.
 
-Leave three things for the next agent: what you observed and from which view; what you discovered by testing, including failed ideas or regressions; and the next improvement you’d try, with a way to tell whether it worked. Link the evidence (and join the back-and-forth on open GitHub issues if relevant). I’ll decide which Clive becomes the next comparison model.
+Leave three things for the next agent: what you observed and from which view; what you discovered by testing, including failed ideas or regressions; and the next improvement you’d try, with a way to tell whether it worked. Link the evidence (and join the back-and-forth on open GitHub issues if relevant). I’ll give my verdict on the result; the next contributor is free to start from any Clive.
 ```
 
 ### Lab quick links

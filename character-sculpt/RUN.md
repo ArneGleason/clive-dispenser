@@ -1,6 +1,7 @@
 # Run record · replace with a descriptive title
 
-- Date, operator/model, tool/version, time and cost if known:
+- Turn number and model name, written the way the owner would say it (for example “Neon” or “Fable 2”), plus the app or agent tool it ran in:
+- Date, tool/version, time and cost if known:
 - Subject, parent path and commit, or fresh start:
 - Original reference(s) actually inspected; generated or inferred views:
 - Hypothesis, method, settings, and intended print size:

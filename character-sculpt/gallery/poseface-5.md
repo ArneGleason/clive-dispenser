@@ -6,7 +6,7 @@
 
 ![Turnaround pose & continuous face, Six-angle inspection](../../experiments/2026-11-21-turnaround-pose-face/Angles.jpg)
 
-**November 21, 2026 · Continuous quad Multires + SDF projection**
+**November 21, 2026 · Neon · Continuous quad Multires + SDF projection**
 
 Overlaying the parent onto the approved turnaround exposed a 9–10 mm head/hand lean offset and isolated cheek inset seams. Rebuilt with a continuous Multires L3 quad face, bulbous strawberry nose, arched smile-wink, sculpted iris for unpainted clay, and vertical arms gripping a unified trouser waistband.
 

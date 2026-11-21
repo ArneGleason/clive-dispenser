@@ -21,6 +21,18 @@ blender -b experiments/2026-11-21-multires-refinement/Clive-Refined.blend --pyth
 
 The second run reuses the parent’s framing so proportion changes stay visible. For unfamiliar assets, inspect a render for clipping, extra scene geometry, or an incorrect front axis.
 
+## Shape language and material character
+
+A model can match every landmark and still look assembled. Before detailing, read how the reference draws its forms: where an edge dips and lifts, how fold and lock widths change, which lines lead the eye into which, and what each material is doing (soft felt, stiff leather, taut cloth, rounded skin, carved hair). Write those down as a short set of rules for the subject and apply them over the whole figure.
+
+Generated turnarounds are composed one view at a time and often disagree. Treat them as art direction. Where views conflict, choose the three-dimensional form that keeps the design's intent from every angle, and record the choice.
+
+Three quick tests while orbiting:
+
+- **Straight-line test.** In front, side and overhead views, does any major edge, fold or lock project to a straight line or a plain circle? If so, it has not been designed in three dimensions yet.
+- **Even-spacing test.** Are repeated features (folds, locks, rolls) the same width and the same distance apart? Vary them.
+- **Material test.** Crop a grey clay render to one element. Can you tell what it is made of from its shape alone?
+
 ## When only one image exists
 
 Start with silhouette, eye line, chin, shoulder width, hands, ground contact, and any overlap that tells you which surface is in front. Build a rough depth hypothesis and render it from the original camera. If the camera is perspective, use that perspective for this overlay; reserve orthographic views for cross-run comparisons.

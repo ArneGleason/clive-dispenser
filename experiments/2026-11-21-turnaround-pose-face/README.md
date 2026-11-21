@@ -1,6 +1,6 @@
 # Run record · Turnaround-aligned pose and continuous quad face
 
-- **Date, operator/model, tool/version:** 2026-11-21 · Antigravity (Gemini) · Blender 5.2.1 LTS
+- **Date, operator/model, tool/version:** 2026-11-21 · Antigravity (Gemini) · Blender 5.2.1 LTS *(turn 4; Arne refers to this turn’s model as **Neon**)*
 - **Subject, parent path and commit:** Clive (`character-sculpt/subjects/clive.md`) · Parent: [`experiments/2026-11-21-multires-refinement/Clive-Refined.blend`](../2026-11-21-multires-refinement/Clive-Refined.blend) (commit `786ecab`, repository `HEAD` at `2fba97c`)
 - **Original reference(s) actually inspected; generated or inferred views:** Inspected owner-supplied front, side, and back turnaround at [`character-sculpt/references/clive-turnaround.png`](../../character-sculpt/references/clive-turnaround.png). Overhead silhouette, underside, open-eye-side profile, and interior cloth/skin junctions were inferred from the three orthographic views. No external image generators or image-to-3D reconstructions were used.
 - **Hypothesis, method, settings, and intended print size:** Intended shelf-figurine height ~108 mm (matched to parent's 107.3 mm scale). The prior run (`LOG.md`) proposed running one multires add/subtract cycle on `Clive-Refined.blend` to lift the cheek into the winking eyelid and soften the moustache ridge. Direct inspection of `Clive-Refined.blend` and a 1:1 orthographic overlay against `clive-turnaround.png` challenged that narrow scope with two structural blockers:
