@@ -14,6 +14,10 @@ famous brick-candy dispenser, but with a mooning garden gnome. Designed for
 > it yet**. Expect to tune a tolerance or two. If you get it working, please
 > share your print, your fixes and your settings. That's half the fun.
 
+## Character sculpt experiments
+
+Start at the [Character Sculpt Lab](character-sculpt/README.md) for the current comparison model, experiment log, reusable workflow, and handoff prompt.
+
 ## How it works
 
 1. Candies stack in a hopper tube inside Clive's back.
