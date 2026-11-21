@@ -172,5 +172,44 @@ const studies = [
         "Nine clay review angles"
       ]
     ]
+  },
+  {
+    "id": "feltcarved",
+    "title": "Felt and carved hair",
+    "date": "November 21, 2026",
+    "method": "GPT-6 · Codex desktop · Blender 5.2.1",
+    "change": "Started from Neon’s PoseFace. A flared felt brim turns over the brows and ears, diagonal folds climb toward the hook, and carved locks swing back under the chin. Buckled boots have a defined welt and heel.",
+    "finding": "The high rear three-quarter shows the strongest improvement. The side profile still exposes the recessed flank between the raised seat and the lowered trousers. Owner verdict pending.",
+    "path": "experiments/2026-11-21-felt-and-carved-hair",
+    "images": [
+      [
+        "../../experiments/2026-11-21-felt-and-carved-hair/Studio-Hero.jpg",
+        "Painted front three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-felt-and-carved-hair/Best-Clay.jpg",
+        "Most improved · matched high rear three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-felt-and-carved-hair/Least-Clay.jpg",
+        "Least convincing · matched side profile"
+      ],
+      [
+        "../../experiments/2026-11-21-felt-and-carved-hair/Comparison-Details.jpg",
+        "Matched cap, expression and boot details"
+      ],
+      [
+        "../../experiments/2026-11-21-felt-and-carved-hair/Angles.jpg",
+        "Nine-angle neutral-clay orbit"
+      ],
+      [
+        "../../experiments/2026-11-21-felt-and-carved-hair/Studio-Rear.jpg",
+        "Painted high rear three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-felt-and-carved-hair/Iterations.jpg",
+        "Three stages of the cap and rim"
+      ]
+    ]
   }
 ];
