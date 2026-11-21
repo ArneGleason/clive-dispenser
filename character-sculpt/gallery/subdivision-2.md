@@ -1,0 +1,15 @@
+# Subdivision study
+
+[History](README.md) · [Agent prompt](../HANDOFF.txt) · [Experiment log](../LOG.md)
+
+[← Previous](subdivision-1.md)　2 of 3 · Three-view turnaround　[Next →](subdivision-3.md)
+
+![Subdivision study, Three-view turnaround](../../experiments/2026-11-21-subdivision-study/Turnaround.jpg)
+
+**November 21, 2026 · Box modeling**
+
+The turnaround guided the forward lean and waistband grip. Editable loops shaped the eyelids, nose, and grin.
+
+The silhouette improved. The cheek, wink, and moustache still read as separate forms, especially from below.
+
+[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md)

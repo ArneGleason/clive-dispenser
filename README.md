@@ -16,7 +16,7 @@ famous brick-candy dispenser, but with a mooning garden gnome. Designed for
 
 ## Character sculpt experiments
 
-[Browse the interactive sculpt history](https://raw.githack.com/ArneGleason/clive-dispenser/main/character-sculpt/gallery/index.html) or start at the [Character Sculpt Lab](character-sculpt/README.md) for the current comparison model, experiment log, reusable workflow, and handoff prompt.
+[Browse the interactive sculpt history](character-sculpt/gallery/README.md) or start at the [Character Sculpt Lab](character-sculpt/README.md) for the current comparison model, experiment log, reusable workflow, and handoff prompt.
 
 ## How it works
 
