@@ -1,6 +1,6 @@
 # Clive · Sculpt history
 
-[Browse the latest sculpt](multires-1.md) · [Start with the original dispenser](original-1.md) · [Copy the current agent prompt](../HANDOFF.txt)
+[Approved reference image](../references/clive-turnaround.png) · [Browse the latest sculpt](multires-1.md) · [Start with the original dispenser](original-1.md) · [Copy the current agent prompt](../HANDOFF.txt)
 
 [![Latest Clive studio render](images/refined.jpg)](multires-1.md)
 

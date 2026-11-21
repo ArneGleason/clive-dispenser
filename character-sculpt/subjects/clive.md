@@ -2,7 +2,7 @@
 
 **Goal.** Make a shelf figurine that reads as this particular mischievous gnome, even in unpainted plastic. First get an exterior Arne likes. A later project phase will make a head press dispense one Tic Tac behind him.
 
-**Visual target.** The owner-supplied image titled *CLIVE — SCULPTURE TURNAROUND*, also saved as *Whimsical Winking Ceramic Gnome Turnaround.png*, shows the approved front, side, and back on one sheet. Ask the owner for the sheet if it is unavailable in your session. The experiment PNGs and JPEGs in this repo are renders of previous models. Treating them as the original would progressively train later attempts on earlier mistakes.
+**Visual target.** The owner-supplied image titled *CLIVE — SCULPTURE TURNAROUND*, also saved as *Whimsical Winking Ceramic Gnome Turnaround.png*, shows the approved front, side, and back on one sheet. [Open the approved original](../references/clive-turnaround.png). The experiment PNGs and JPEGs in this repo are renders of previous models. Treating them as the original would progressively train later attempts on earlier mistakes.
 
 | Read in the sheet | What to check while orbiting |
 |---|---|

@@ -14,6 +14,12 @@ famous brick-candy dispenser, but with a mooning garden gnome. Designed for
 > it yet**. Expect to tune a tolerance or two. If you get it working, please
 > share your print, your fixes and your settings. That's half the fun.
 
+## Approved sculpt reference
+
+[![Clive’s approved front, side, and back turnaround](character-sculpt/references/clive-turnaround.png)](character-sculpt/references/clive-turnaround.png)
+
+[Open the original PNG](https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png). Use this sheet as the likeness target for every sculpt experiment.
+
 ## Give an agent a turn
 
 Copy the whole prompt into your agent. Each turn contributes a candidate and a record of what the next contributor can learn from it.
@@ -21,7 +27,7 @@ Copy the whole prompt into your agent. Each turn contributes a candidate and a r
 ```text
 Take a turn at making a better Clive in https://github.com/ArneGleason/clive-dispenser. The goal is a mischievous gnome I’d want to print and put on a shelf. Focus this turn on his likeness, expression, and pose. The dispenser mechanics come later.
 
-Start in character-sculpt/. Read subjects/clive.md, WORKFLOW.md, LOG.md, and the recent run notes. Use the comparison model named in the log unless I name another parent. Inspect the approved turnaround; ask me to attach it if you can’t access it. Orbit the parent, including high and low three-quarter views. Use your judgment to choose the change with the biggest visual payoff. A previous agent’s suggestion is a hypothesis you can test or challenge.
+Start in character-sculpt/. Read subjects/clive.md, WORKFLOW.md, LOG.md, and the recent run notes. Use the comparison model named in the log unless I name another parent. Open the approved front, side, and back turnaround at character-sculpt/references/clive-turnaround.png (path from the repository root). If your checkout predates the image, fetch main or open the PNG directly at https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png. Orbit the parent, including high and low three-quarter views. Use your judgment to choose the change with the biggest visual payoff. A previous agent’s suggestion is a hypothesis you can test or challenge.
 
 Make the change with the tools available to you. You can add or subtract volume, refine the cage, or try a different modeling method. Render the parent and candidate with matched framing and light. Show the angle where your change helped most and the angle where it holds up least.
 
