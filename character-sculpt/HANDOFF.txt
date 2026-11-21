@@ -1,0 +1,7 @@
+Work on the Character Sculpt Lab in https://github.com/ArneGleason/clive-dispenser. Use the existing checkout if available, or open the repository and read character-sculpt/README.md, subjects/clive.md, WORKFLOW.md, and LOG.md (the last three are under character-sculpt).
+
+Use the named parent for an independent comparison. Otherwise take the current comparison model from LOG.md. Inspect the approved Clive turnaround. If it is unavailable, ask me for the image before attempting a likeness pass.
+
+Orbit the parent in clay. Choose one visual problem, state what should improve and what should stay recognizable, and run an addition-and-subtraction cycle or a clearly labeled alternative-method trial. Use the available modeling tools. Separate observed features from invented views. Compare the parent and candidate using the same camera, scale, and light, including the least convincing angle.
+
+Save the editable candidate, matched renders, and run record in a new experiment directory. Append the findings to character-sculpt/LOG.md and add the run and its screenshots to character-sculpt/gallery/catalog.js. Show me what improved, what regressed, and what you would test next. Leave the keeper decision to me.

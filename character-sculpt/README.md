@@ -2,11 +2,13 @@
 
 Develop a repeatable way to turn one or more character images into a figurine the owner wants to print. Clive, the mooning garden gnome, is the first subject. The owner judges likeness and appeal. The result of a run can be a useful rejection.
 
+[Browse Clive’s sculpt history and copy the current prompt](https://raw.githack.com/ArneGleason/clive-dispenser/main/character-sculpt/gallery/index.html).
+
 **Start a run** by reading [Clive’s brief](subjects/clive.md), the [experiment log](LOG.md), and the [refinement workflow](WORKFLOW.md). Copy the [run template](RUN.md) into a new experiment directory. A new model, tool, or representation is welcome.
 
 ## Handoff prompt
 
-> Work on the Character Sculpt Lab in this repository. Read character-sculpt/README.md, subjects/clive.md, WORKFLOW.md and LOG.md (the last three are inside character-sculpt). For an independent trial start from the named parent, even if another candidate has been logged. For a continuation start from the latest owner-selected parent, or use the current comparison model. Inspect the target image and rotate the parent. Run one documented addition-and-subtraction cycle or a clearly labeled alternative-method experiment. Save the editable candidate, matched renders, and run record in a new experiment directory. Append the comparison and open questions to the log. Show me the parent and candidate and tell me where it got worse. Leave the keeper decision to me.
+Use [the current handoff](HANDOFF.txt). The gallery reads this same file. To catalog a new run, add its notes and image paths to [catalog.js](gallery/catalog.js). From a checkout, serve the repository root with `python -m http.server 8000` and open `http://localhost:8000/character-sculpt/gallery/`.
 
 ## What counts as progress
 
