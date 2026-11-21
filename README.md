@@ -4,7 +4,9 @@
 
 **The goal:** Turn one approved ceramic turnaround into a cheeky mooning garden gnome you’d genuinely want to 3D-print and put on a shelf — even in unpainted plastic. Once Clive’s likeness, expression, and pose earn the nod, we’ll marry the winning exterior to the mechanical dispenser below so tipping his head forward pops a Tic Tac or Pez out of his bum.
 
-[![Clive’s approved front, side, and back turnaround](character-sculpt/references/clive-turnaround.png)](character-sculpt/references/clive-turnaround.png)
+[![The approved turnaround above, the latest relay turn below](experiments/2026-11-21-fused-clay-sdf/Turnaround-vs-Reference.jpg)](experiments/2026-11-21-fused-clay-sdf/README.md)
+
+*Top: the one image every turn is measured against. Bottom: where the relay stands after five turns. The boots, cap and face still have a way to go. Think you can close the gap?*
 
 > **Visual target:** [Open the original turnaround PNG](https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png) (`character-sculpt/references/clive-turnaround.png`). Every sculpt turn measures itself against this sheet — not earlier model renders.
 
@@ -16,26 +18,28 @@
 
 Each turn builds on the shared lab notes, tests or challenges a prior hypothesis, renders matched clay comparisons (`character-sculpt/tools/review_views.py`), and leaves honest observations — including failed ideas and the least convincing angle — for the next contributor.
 
-| Description-only baseline | Subdivision cage | Multires refinement *(baseline)* | Turnaround pose & continuous face *(latest)* |
-|---|---|---|---|
-| [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) |
-| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* |
+| 1 · Description only | 2 · Subdivision cage | 3 · Multires refinement *(comparison model)* | 4 · Turnaround pose & continuous face | 5 · One fused clay surface *(latest)* |
+|---|---|---|---|---|
+| [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) | [![One fused clay surface](experiments/2026-11-21-fused-clay-sdf/Studio-Hero.jpg)](character-sculpt/gallery/fusedclay-1.md) |
+| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* | Rebuilt as a single surface at the sheet's chunky proportions, trousers made of garment parts. Verdict pending. |
 
-### Latest matched clay comparison (parent left vs. latest turn right)
+### Latest matched clay comparison
 
-Both columns use identical neutral clay, lighting, and orthographic framing so geometry speaks without paint:
+Same neutral clay, light and orthographic frame in every column, so geometry speaks without paint. Left to right: the comparison model, the previous turn, the latest turn.
 
-| Close-up expression (front & low 3/4) | Full figure (front, low 3/4, side & weakest `rear_high`) |
+| Whole figure, from the angle that improved most down to the one that holds up least | Face |
 |---|---|
-| [![Matched clay face comparison](experiments/2026-11-21-turnaround-pose-face/Comparison-Face-Clay.jpg)](experiments/2026-11-21-turnaround-pose-face/README.md) | [![Matched 4-angle clay comparison](experiments/2026-11-21-turnaround-pose-face/Comparison-Clay.jpg)](experiments/2026-11-21-turnaround-pose-face/README.md) |
+| [![Matched four-angle clay comparison](experiments/2026-11-21-fused-clay-sdf/Comparison-Clay.jpg)](experiments/2026-11-21-fused-clay-sdf/README.md) | [![Matched clay face comparison](experiments/2026-11-21-fused-clay-sdf/Comparison-Face-Clay.jpg)](experiments/2026-11-21-fused-clay-sdf/README.md) |
+
+The latest turn answered Arne’s two structural critiques head-on ([contact tests](experiments/2026-11-21-fused-clay-sdf/Comparison-Contact-Clay.jpg)): the trousers now trace as waistband, seat seam and two legs, and no part can pass through another because the figure is one surface. It paid for that with a weaker [side view](experiments/2026-11-21-fused-clay-sdf/Least-Convincing-Side.jpg) and a softer face than turn 4.
 
 ### What’s up for grabs next
 
-Arne’s latest critique ([`character-sculpt/HYPOTHESES.md`](character-sculpt/HYPOTHESES.md) · [GitHub Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)) points straight to the next big leap:
+There are now two live branches, and Arne hasn’t picked between them ([log](character-sculpt/LOG.md) · [hypotheses and results](character-sculpt/HYPOTHESES.md) · [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)):
 
-1. **Real trouser topology** — Clive’s lowered pants still read as stacked rings and a separate waistband rather than a recognizable, continuous two-legged pair of pants pulled down and stretched between his hands.
-2. **Physical contact instead of blind interpenetration** — separate 3D parts (especially **hat vs. hair brim**, **pants vs. seat/hands**, and **smock vs. sleeves/hips**) push through one another instead of compressing, wrapping, and reacting to each other.
-3. **“Goals from two directions”** — try meeting in the middle: combine **outside-in** silhouette fitting to `clive-turnaround.png` with **inside-out** anatomical and garment geometry logic (starting from humanoid reference meshes, real bifurcated cloth patterns with Blender Cloth/Shrinkwrap, unified ceramic clay fusion, or a multiview image-to-3D hybrid).
+1. **Fix the fused branch’s side view.** Measured against the sheet, the body overshot (sleeves, trouser pool and boots are 15–50% too big), so the head reads small; the cap hook is short and stiff and the legs crouch. Every landmark is a named millimetre coordinate in [`sculpt_clive.py`](experiments/2026-11-21-fused-clay-sdf/sculpt_clive.py), and a full rebuild takes seconds.
+2. **Give him the sheet’s face.** Turn 4 has the crisper wink; turn 5 has the better cheek-to-beard flow. Nobody has yet made the round, warm open eye and the wide crooked grin read in unpainted clay at thumbnail size.
+3. **Try what hasn’t been tried.** A posed humanoid base mesh, a real cloth simulation for the trouser folds, or a multiview image-to-3D base are all still untested. Any of them could beat both branches.
 
 ---
 

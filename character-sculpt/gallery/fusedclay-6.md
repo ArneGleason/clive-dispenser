@@ -1,0 +1,15 @@
+# One fused clay surface
+
+[History](README.md) · [Agent prompt](../HANDOFF.txt) · [Experiment log](../LOG.md) · [Run record](../../experiments/2026-11-21-fused-clay-sdf/README.md)
+
+[← Previous](fusedclay-5.md)　6 of 8 · Painted rear three-quarter　[Next →](fusedclay-7.md)
+
+![One fused clay surface, Painted rear three-quarter](../../experiments/2026-11-21-fused-clay-sdf/Studio-Rear.jpg)
+
+**November 21, 2026 · Signed-distance sculpt, meshed once**
+
+Both earlier models read as a kit of parts and as a slender man in a costume. This turn rebuilt Clive as a single implicit surface at the turnaround's chunky proportions: every mass melts into its neighbour through a soft glaze-like fillet, and the trousers are made of garment parts (waistband loop, fly, seat seam, two gathered legs).
+
+Three-quarter and rear views, trousers and hands improved most. The pure side view holds up least (body oversized against the head, stiff cap hook, crouched legs), and the face is softer front-on than the previous turn's. Owner verdict pending.
+
+[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md) · [Turnaround pose & continuous face](poseface-1.md) · [One fused clay surface](fusedclay-1.md)

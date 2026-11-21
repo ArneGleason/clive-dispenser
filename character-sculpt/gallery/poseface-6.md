@@ -2,7 +2,7 @@
 
 [History](README.md) · [Agent prompt](../HANDOFF.txt) · [Experiment log](../LOG.md) · [Run record](../../experiments/2026-11-21-turnaround-pose-face/README.md)
 
-[← Previous](poseface-5.md)　6 of 6 · Matched parent and candidate clay views (front, low 3/4, side, high rear)
+[← Previous](poseface-5.md)　6 of 6 · Matched parent and candidate clay views (front, low 3/4, side, high rear)　[Next →](fusedclay-1.md)
 
 ![Turnaround pose & continuous face, Matched parent and candidate clay views](../../experiments/2026-11-21-turnaround-pose-face/Comparison-Clay.jpg)
 
@@ -12,4 +12,4 @@ Overlaying the parent onto the approved turnaround exposed a 9–10 mm head/hand
 
 Front, side, and low three-quarter likeness, expression, and hand-to-waistband solidity improved substantially. Elevated rear oblique views still show segmented behind-ear nape tubes and a recessed hip-flank step; owner verdict pending.
 
-[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md) · [Turnaround pose & continuous face](poseface-1.md)
+[Original dispenser](original-1.md) · [Assembled sculpt](assembled-1.md) · [Subdivision study](subdivision-1.md) · [Multires refinement](multires-1.md) · [Turnaround pose & continuous face](poseface-1.md) · [One fused clay surface](fusedclay-1.md)

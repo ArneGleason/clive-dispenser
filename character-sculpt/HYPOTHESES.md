@@ -71,3 +71,15 @@ Compare against the baseline in `character-sculpt/tools/review_views.py` (matche
 2. **Hat-over-hair contact test (`side`, `rear_high`, `front_high`, close-up ear/brim):** Does hair clearly tuck *under* the cap brim (compressed at the rim, blooming below it) or does the cap visibly conform over the hair, with zero curls poking through the hat wall?
 3. **Hand-and-cloth compression test (`front_low`, close-up hands):** Do palm and fingers read as one continuous articulated hand pressing into and pulling on a continuous waistband lip?
 4. **Unpainted clay charm test (`front`, `wink_side`, `face_front` clay):** Does Clive still read immediately as this specific mischievous winking ceramic gnome in flat matte clay at ~108 mm print scale?
+
+---
+
+## 6. Results so far
+
+| Hypothesis | Turn | What happened |
+|---|---|---|
+| C · unified ceramic fusion | [2026-11-21 fused clay](../experiments/2026-11-21-fused-clay-sdf/README.md) | Taken to its limit: the whole figure is one signed-distance surface, so nothing can interpenetrate and every seam is a soft fillet. Passes checklist tests 1 (trousers) and 3 (hands) in [`Comparison-Contact-Clay.jpg`](../experiments/2026-11-21-fused-clay-sdf/Comparison-Contact-Clay.jpg); test 2 (cap over hair) passes on contact but the curls are small; test 4 (clay charm) is mixed, better as a whole figure and softer in the face. The watch-out was right: the editable cage is gone, replaced by a script. |
+| B · real garment topology | same turn, partly | Challenged, not tested. Building the trousers from garment *parts* (waistband loop, fly, seat seam, two legs) was enough to make them read; no cloth simulation was run. A simulation might still give better folds and real compression. The contact here is a fillet, not physics. |
+| A · humanoid base mesh | none | Untested. The fused turn's side view (crouched legs, body out of scale with the head) is the kind of error a posed anatomical base would catch. |
+| D · image-to-3D | none | Untested; it needs model weights or an outside service. |
+
