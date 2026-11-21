@@ -99,7 +99,7 @@ const studies = [
     "id": "poseface",
     "title": "Turnaround pose & continuous face",
     "date": "November 21, 2026",
-    "method": "Continuous quad Multires + SDF projection",
+    "method": "Neon · Continuous quad Multires + SDF projection",
     "change": "Overlaying the parent onto the approved turnaround exposed a 9–10 mm head/hand lean offset and isolated cheek inset seams. Rebuilt with a continuous Multires L3 quad face, bulbous strawberry nose, arched smile-wink, sculpted iris for unpainted clay, and vertical arms gripping a unified trouser waistband.",
     "finding": "Front, side, and low three-quarter likeness, expression, and hand-to-waistband solidity improved substantially. Elevated rear oblique views still show segmented behind-ear nape tubes and a recessed hip-flank step; owner verdict pending.",
     "path": "experiments/2026-11-21-turnaround-pose-face",
@@ -127,6 +127,49 @@ const studies = [
       [
         "../../experiments/2026-11-21-turnaround-pose-face/Comparison-Clay.jpg",
         "Matched parent and candidate clay views (front, low 3/4, side, high rear)"
+      ]
+    ]
+  },
+  {
+    "id": "fusedclay",
+    "title": "One fused clay surface",
+    "date": "November 21, 2026",
+    "method": "Fable 2 · Signed-distance sculpt, meshed once",
+    "change": "Both earlier models read as a kit of parts and as a slender man in a costume. This turn rebuilt Clive as a single implicit surface at the turnaround's chunky proportions: every mass melts into its neighbour through a soft glaze-like fillet, and the trousers are made of garment parts (waistband loop, fly, seat seam, two gathered legs).",
+    "finding": "Three-quarter and rear views, trousers and hands improved most. The pure side view holds up least (body oversized against the head, stiff cap hook, crouched legs), and the face is softer front-on than the previous turn's. Arne (2026-11-21): it tried harder but made mistakes it couldn’t fix; he preferred the aesthetic of Neon’s turn 4 (pose & continuous face) and wants the sheet’s shape language and material character next.",
+    "path": "experiments/2026-11-21-fused-clay-sdf",
+    "images": [
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Studio-Hero.jpg",
+        "Painted studio render"
+      ],
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Turnaround-vs-Reference.jpg",
+        "Approved turnaround above, this turn below"
+      ],
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Comparison-Clay.jpg",
+        "Matched clay: parent, previous turn, this turn (most improved to least convincing)"
+      ],
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Comparison-Face-Clay.jpg",
+        "Matched clay face comparison"
+      ],
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Comparison-Contact-Clay.jpg",
+        "Matched clay contact tests: trousers, hands, cap rim"
+      ],
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Studio-Rear.jpg",
+        "Painted rear three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Least-Convincing-Side.jpg",
+        "Least convincing angle: side view against the sheet"
+      ],
+      [
+        "../../experiments/2026-11-21-fused-clay-sdf/Angles.jpg",
+        "Nine clay review angles"
       ]
     ]
   }

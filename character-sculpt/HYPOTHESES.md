@@ -24,7 +24,7 @@ Every procedural and box-modeled attempt so far worked primarily **outside-in** 
 
 ## 3. Competing hypotheses to test (handoff notes for Fable 2 & future agents)
 
-Any turn can pick one of these branches (or combine two) and compare the result honestly against the current comparison model in `tools/review_views.py`:
+Any turn can pick one of these branches (or combine two) and compare the result honestly against its chosen starting model in `tools/review_views.py`:
 
 ### Hypothesis A · Humanoid reference base mesh + pose-first, dress-second
 - **Method:** Start from an open-source stylized humanoid base mesh (for example, Blender Studio's CC0 Human Base Meshes bundle — stylized male body, head, hands — or an articulated all-quad mannequin with proper craniofacial loops, shoulders, pelvis, thighs, knees, and 5-finger hands). Stylize its proportions to Clive (large head ~1:2.2 total height, stocky torso/arms, plump cheeks/nose/hands), rig/pose it into the exact bent-over mooning pose first, and only then build clothing and hair *onto* the posed body.
@@ -71,3 +71,54 @@ Compare against the baseline in `character-sculpt/tools/review_views.py` (matche
 2. **Hat-over-hair contact test (`side`, `rear_high`, `front_high`, close-up ear/brim):** Does hair clearly tuck *under* the cap brim (compressed at the rim, blooming below it) or does the cap visibly conform over the hair, with zero curls poking through the hat wall?
 3. **Hand-and-cloth compression test (`front_low`, close-up hands):** Do palm and fingers read as one continuous articulated hand pressing into and pulling on a continuous waistband lip?
 4. **Unpainted clay charm test (`front`, `wink_side`, `face_front` clay):** Does Clive still read immediately as this specific mischievous winking ceramic gnome in flat matte clay at ~108 mm print scale?
+
+---
+
+## 6. Results so far
+
+| Hypothesis | Turn | What happened |
+|---|---|---|
+| C · unified ceramic fusion | [2026-11-21 fused clay](../experiments/2026-11-21-fused-clay-sdf/README.md) | Taken to its limit: the whole figure is one signed-distance surface, so nothing can interpenetrate and every seam is a soft fillet. Passes checklist tests 1 (trousers) and 3 (hands) in [`Comparison-Contact-Clay.jpg`](../experiments/2026-11-21-fused-clay-sdf/Comparison-Contact-Clay.jpg); test 2 (cap over hair) passes on contact but the curls are small; test 4 (clay charm) is mixed, better as a whole figure and softer in the face. The watch-out was right: the editable cage is gone, replaced by a script. |
+| B · real garment topology | same turn, partly | Challenged, not tested. Building the trousers from garment *parts* (waistband loop, fly, seat seam, two legs) was enough to make them read; no cloth simulation was run. A simulation might still give better folds and real compression. The contact here is a fillet, not physics. |
+| A · humanoid base mesh | none | Untested. The fused turn's side view (crouched legs, body out of scale with the head) is the kind of error a posed anatomical base would catch. |
+| D · image-to-3D | none | Untested; it needs model weights or an outside service. |
+
+Arne's verdict on the fused-clay turn and the shape-language critique that followed are in section 7.
+
+---
+
+## 7. Owner critique after the fused-clay turn: shape language
+
+**2026-11-21 (Arne).** On the fused-clay turn: it "looked like it tried harder, made some mistakes that it couldn't fix." On aesthetics he preferred Neon's turn, [turnaround pose & continuous face](../experiments/2026-11-21-turnaround-pose-face/README.md) (`Clive-PoseFace.blend`). His main point applies to every turn so far, and is written up in full in [`subjects/clive.md`](subjects/clive.md#shape-language--owner-guidance-2026-11-21):
+
+- The reference has **shape character** that no model has captured. His example is the cap rim: it "isn't just like a … donut." It curves down and back up, conforming to Clive's head and also defining it, and the wrinkles that follow up the cap make good curve lines as pure composition. The beard does the same.
+- The generated models' curves follow "pretty much a straight line on one of the axes" and do not consider all three dimensions.
+- The sheet is three image-generated views, each made to look good on its own and probably not coherent with the others. Whoever sculpts has to **interpret it and overlay a consistent aesthetic of their own**: heuristics, guidance, formulas, applied over the entire shape.
+- Each element should carry a **caricature of its physical material**: the cap as worn cloth or felt, the boots as stiff leather, the skin as a coherent rounded organic shape, the hair stylised and sculptural in the way ancient Greek and Roman sculptors carved hair.
+- **Starting point:** the next contributor looks through all the saved models and decides for itself which is the better starter. There is no fixed comparison model any more.
+
+### Where the fused-clay turn falls short of this, in its own code
+
+Useful if you start from [`sculpt_clive.py`](../experiments/2026-11-21-fused-clay-sdf/sculpt_clive.py), and a caution if you do not:
+
+- The cap rim is literally a tilted torus with a small sine wobble (`cap`, the `brim` term). It is a ring.
+- The cap folds are a sine of the distance along the spine. They are bands round an axis, not lines that spiral up into the hook.
+- Each beard lock is a straight interpolation from a start point to an end point with a sideways sine added in X only. Nothing bends in depth.
+- The hair is two rows of near-identical ringlets. No hierarchy, no grooves, no direction.
+- The boots are smooth-unioned capsules. Nothing about them says leather.
+
+### Approaches worth testing
+
+- **E · Draw the lines first.** Before adding any volume, author the main lines as explicit 3D curves: the rim, each cap fold, each beard and hair lock. Check each one in front, side and overhead projection against the rules in the brief. Then build volume along them with a profile that changes along the length. This works with a subdivision cage, with curve sweeps, or with distance fields.
+- **F · One fold vocabulary per material.** Give felt, leather, cloth and hair each their own small set of fold or lock shapes and use nothing else on that material.
+- **G · Carved hair.** Build hair as a hierarchy: a few primary masses, then ribbon-like locks with a flattened section, then two or three engraved grooves per lock, with ends rolled into volutes and crisp V-shaped valleys between locks.
+- **H · Resolve the sheet's contradictions on purpose.** List where the three views disagree (rim height at the temple, cap depth against width, how far the beard projects) and write down which reading you chose and why.
+
+### How to tell whether it worked
+
+Add these to the checklist in section 5:
+
+5. **Straight-line test (`front`, `side`, `overhead`):** no major edge, fold or lock projects to a straight line or a plain circle in any of the three.
+6. **Line render:** a silhouette-and-crease render with no shading should already look like a pleasing drawing of Clive.
+7. **Material blind test:** grey clay crops of the cap, a boot, the beard and a cheek can each be identified by material from shape alone.
+8. **Rim test (`front`, `side`, `rear`, `overhead`):** the cap edge reads as one continuous curve that rises over the brow, falls over the temples and behind the ears, and settles at the nape.
