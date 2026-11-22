@@ -84,6 +84,7 @@ Compare against the baseline in `character-sculpt/tools/review_views.py` (matche
 | B · real garment topology | same turn, partly | Challenged, not tested. Building the trousers from garment *parts* (waistband loop, fly, seat seam, two legs) was enough to make them read; no cloth simulation was run. A simulation might still give better folds and real compression. The contact here is a fillet, not physics. |
 | A · humanoid base mesh | none | Untested. The fused turn's side view (crouched legs, body out of scale with the head) is the kind of error a posed anatomical base would catch. |
 | D · image-to-3D | none | Untested; it needs model weights or an outside service. |
+| E · draw the lines first, and C in part | [2026-11-21 fists and grin](../experiments/2026-11-21-hands-and-charm/README.md) | Beard and moustache locks authored as 3-D curves on a teardrop apron before any volume, then swept as grooved ribbons; fists and bust fused as distance fields and dropped into the cage lineage. Passes the straight-line test for the beard from front and side. Brows, cuffs and sleeves still fail it. |
 
 Arne's verdict on the fused-clay turn and the shape-language critique that followed are in section 7.
 

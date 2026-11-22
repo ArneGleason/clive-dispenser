@@ -308,5 +308,52 @@ const studies = [
         "Nine-angle neutral-clay orbit"
       ]
     ]
+  },
+  {
+    "id": "handsgrin",
+    "title": "Chubby fists, a real grin and a beard that flows",
+    "date": "November 21, 2026",
+    "method": "Fable 2 (Claude Fable 5.2) · Claude Code · PyTorch SDF + Blender 5.2.1",
+    "change": "Started from turn 9 (`Clive-GarmentAndHair.blend`) after Arne asked for serious work on the hands and more of the reference's charm. Replaced the mitten hands with sheet-sized fists gripping the waistband, and the scowling head and separate beard locks with one glazed bust: ball nose, cheek apples, wink arc, toothy grin, handlebar moustache and a beard whose locks fan from the lip and gather to a hooked tip. Cap, smock, trousers, boots and seat are turn 9's, untouched.",
+    "finding": "Hands and expression improved most from the front and three-quarter, in clay and paint. From the side the fists still read as hooks, the face is busier in clay than turn 9's, and the cuffs, sleeves and body proportions are unchanged. Owner verdict pending.",
+    "path": "experiments/2026-11-21-hands-and-charm",
+    "images": [
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Studio-Hero.jpg",
+        "Painted three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Comparison-Hands.jpg",
+        "Hands: the sheet, turn 9 and turn 10"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Comparison-Face.jpg",
+        "Face: the sheet, turn 9 and turn 10"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Comparison-Clay.jpg",
+        "Matched neutral clay, turn 9 left and turn 10 right"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Comparison-Color.jpg",
+        "Matched paint, turn 9 left and turn 10 right"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Turnaround-vs-Reference.jpg",
+        "Approved turnaround above, turn 10 below"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Least-Convincing.jpg",
+        "Least convincing: fists from the side, face from below"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Face-Portrait.jpg",
+        "Painted face"
+      ],
+      [
+        "../../experiments/2026-11-21-hands-and-charm/Angles.jpg",
+        "Nine-angle neutral-clay orbit"
+      ]
+    ]
   }
 ];
