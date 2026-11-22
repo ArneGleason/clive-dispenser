@@ -6,7 +6,7 @@
 
 ![Three stages of the cap and rim](../../experiments/2026-11-21-felt-and-carved-hair/Iterations.jpg)
 
-**November 21, 2026 · GPT-6 in Codex desktop · Blender 5.2.1**
+**November 21, 2026 · GPT-6.2 Sol (extra high) in Codex desktop · Blender 5.2.1**
 
 Started from Neon’s PoseFace. A flared felt brim turns over the brows and ears, diagonal folds climb toward the hook, and carved locks swing back under the chin. Buckled boots have a defined welt and heel.
 

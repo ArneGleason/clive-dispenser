@@ -2,11 +2,11 @@
 
 [History](README.md) · [Agent prompt](../HANDOFF.txt) · [Experiment log](../LOG.md) · [Run record](../../experiments/2026-11-21-seat-and-smock/README.md)
 
-[← Previous](seatsmock-4.md)　5 of 5 · Painted front three-quarter
+[← Previous](seatsmock-4.md)　5 of 5 · Painted front three-quarter　[Next →](roundedseat-1.md)
 
 ![Painted front three-quarter](../../experiments/2026-11-21-seat-and-smock/Studio-Hero.jpg)
 
-**November 21, 2026 · GPT-6 in Codex desktop · Blender 5.2.1**
+**November 21, 2026 · GPT-6.2 Sol (extra high) in Codex desktop · Blender 5.2.1**
 
 Started from turn 6 to answer the owner’s note about the gap at the hips. One pelvis cage flows into both thighs. The shirt hem and lowered waistband follow that anatomy.
 

@@ -177,7 +177,7 @@ const studies = [
     "id": "feltcarved",
     "title": "Felt and carved hair",
     "date": "November 21, 2026",
-    "method": "GPT-6 · Codex desktop · Blender 5.2.1",
+    "method": "GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1",
     "change": "Started from Neon’s PoseFace. A flared felt brim turns over the brows and ears, diagonal folds climb toward the hook, and carved locks swing back under the chin. Buckled boots have a defined welt and heel.",
     "finding": "The high rear three-quarter shows the strongest improvement. The side profile still exposes the recessed flank between the raised seat and the lowered trousers. Owner verdict pending.",
     "path": "experiments/2026-11-21-felt-and-carved-hair",
@@ -216,7 +216,7 @@ const studies = [
     "id": "seatsmock",
     "title": "Fitted smock and seat",
     "date": "November 21, 2026",
-    "method": "GPT-6 · Codex desktop · Blender 5.2.1",
+    "method": "GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1",
     "change": "Started from turn 6 to answer the owner’s note about the gap at the hips. One pelvis cage flows into both thighs. The shirt hem and lowered waistband follow that anatomy.",
     "finding": "Side and low rear improved most. The cloth bands still read separately near the grip from low front. Owner verdict pending.",
     "path": "experiments/2026-11-21-seat-and-smock",
@@ -240,6 +240,37 @@ const studies = [
       [
         "../../experiments/2026-11-21-seat-and-smock/Studio-Hero.jpg",
         "Painted front three-quarter"
+      ]
+    ]
+  },
+  {
+    "id": "roundedseat",
+    "title": "Rounded seat and ceramic glaze",
+    "date": "November 21, 2026",
+    "method": "GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1",
+    "change": "Round the seat above and below its widest point while preserving its rear projection. Refit the shirt and waistband around the new arc and add ceramic glaze colors.",
+    "finding": "The rounded side follows the approved profile more closely. Low rear still shows a separate waistband lip over the leg folds. Owner verdict pending.",
+    "path": "experiments/2026-11-21-rounded-seat",
+    "images": [
+      [
+        "../../experiments/2026-11-21-rounded-seat/Comparison-Color.jpg",
+        "Painted side profile, before and after"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Studio-Hero.jpg",
+        "Painted front three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Studio-Rear.jpg",
+        "Painted rear three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Comparison-Clay.jpg",
+        "Matched clay side and low rear"
+      ],
+      [
+        "../../experiments/2026-11-21-rounded-seat/Reference-Profile.jpg",
+        "Approved side and two shape trials"
       ]
     ]
   }
