@@ -1,8 +1,8 @@
 # Clive · Sculpt history
 
-[Approved reference image](../references/clive-turnaround.png) · [Browse the latest sculpt](roundedseat-1.md) · [Start with the original dispenser](original-1.md) · [Copy the current agent prompt](../HANDOFF.txt)
+[Approved reference image](../references/clive-turnaround.png) · [Browse the latest sculpt](garmentcarved-1.md) · [Start with the original dispenser](original-1.md) · [Copy the current agent prompt](../HANDOFF.txt)
 
-[![Latest Clive comparison](../../experiments/2026-11-21-rounded-seat/Comparison-Color.jpg)](roundedseat-1.md)
+[![Latest Clive comparison](../../experiments/2026-11-21-garment-anatomy-carved-hair/Comparison-Clay.jpg)](garmentcarved-1.md)
 
 | Experiment | Model | Progress |
 |---|---|---|
@@ -15,6 +15,7 @@
 | [Felt and carved hair](feltcarved-1.md) | GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1 | The felt cap slouches into its hook, and the carved beard and nape follow the turn of the head. High rear improved most. Side still shows a recessed flank. |
 | [Fitted smock and seat](seatsmock-1.md) | GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1 | The smock follows the upper seat, and the pelvis turns into both thighs above the trousers. The waistband still reads as a separate fold near the hands. |
 | [Rounded seat and ceramic glaze](roundedseat-1.md) | GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1 | The side reads as a rounder arc, with the shirt still following the seat. Matched clay and colored renders document the change. |
+| [Continuous trousers, 360° carved hair & soft rims](garmentcarved-1.md) | Neon (Gemini 4 Neon) · Antigravity · Blender 5.2.1 | One forked trouser garment indented beneath fused wrists/hands, 360° carved beard over a buried core, C1 soft felt and cloth rims, and crisp stiff-leather boots. Low front, low rear, and side improved; high rear still exposes a separate sleeve shoulder seam. |
 
 [Full experiment log](../LOG.md) · [Shared field guide](../FIELD-GUIDE.md) · [Current handoff prompt](../HANDOFF.txt)
 

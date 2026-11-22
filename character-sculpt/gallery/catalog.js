@@ -273,5 +273,40 @@ const studies = [
         "Approved side and two shape trials"
       ]
     ]
+  },
+  {
+    "id": "garmentcarved",
+    "title": "Continuous trousers, 360° carved hair & soft rims",
+    "date": "November 21, 2026",
+    "method": "Neon (Gemini 4 Neon) · Antigravity · Blender 5.2.1",
+    "change": "Started from turn 8 (`Clive-RoundedSeat.blend`). Replaced the four-piece trousers with one continuous forked two-leg cage indented under fused wrist/hand grips, wrapped Greek-carved beard locks 360° over a recessed core, gave the cap felt rim and smock hem C1 semicircular turns, draped the sleeves, and sharpened boot welt/heel planes.",
+    "finding": "Low front, low rear, and side garment continuity, back/side beard carving, rim softness, wrist/hand form, and boot planes improved cleanly. High rear still shows the separate sleeve-to-smock shoulder intersection seam. Owner verdict pending.",
+    "path": "experiments/2026-11-21-garment-anatomy-carved-hair",
+    "images": [
+      [
+        "../../experiments/2026-11-21-garment-anatomy-carved-hair/Comparison-Clay.jpg",
+        "Matched neutral clay, turn 8 left and turn 9 right (low front, low rear, side)"
+      ],
+      [
+        "../../experiments/2026-11-21-garment-anatomy-carved-hair/Comparison-Details.jpg",
+        "Close-up comparisons: 360° beard, hands & trousers, boots, and 160 px check"
+      ],
+      [
+        "../../experiments/2026-11-21-garment-anatomy-carved-hair/Studio-Hero.jpg",
+        "Painted front three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-garment-anatomy-carved-hair/Studio-Rear.jpg",
+        "Painted rear three-quarter"
+      ],
+      [
+        "../../experiments/2026-11-21-garment-anatomy-carved-hair/Least-Clay.jpg",
+        "Least convincing · high rear and overhead"
+      ],
+      [
+        "../../experiments/2026-11-21-garment-anatomy-carved-hair/Angles.jpg",
+        "Nine-angle neutral-clay orbit"
+      ]
+    ]
   }
 ];

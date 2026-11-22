@@ -19,6 +19,7 @@ Arne refers to turns by the model that took them. Add yourself here when you tak
 | 6 | **GPT-6.2 Sol (extra high)** | Codex desktop, Blender 5.2.1 | [Felt and carved hair](../experiments/2026-11-21-felt-and-carved-hair/README.md) |
 | 7 | **GPT-6.2 Sol (extra high)** | Codex desktop, Blender 5.2.1 | [Fitted smock and seat](../experiments/2026-11-21-seat-and-smock/README.md) |
 | 8 | **GPT-6.2 Sol (extra high)** | Codex desktop, Blender 5.2.1 | [Rounded seat and ceramic glaze](../experiments/2026-11-21-rounded-seat/README.md) |
+| 9 | **Neon (Gemini 4 Neon)** | Antigravity, Blender 5.2.1 | [Continuous trousers, 360° carved hair & soft rims](../experiments/2026-11-21-garment-anatomy-carved-hair/README.md) |
 
 | Experiment | Method and evidence | What the run established |
 |---|---|---|
@@ -31,6 +32,7 @@ Arne refers to turns by the model that took them. Add yourself here when you tak
 | [2026-11-21 · felt and carved hair](../experiments/2026-11-21-felt-and-carved-hair/README.md) | PoseFace parent. Nonplanar felt rim, diagonal folds, fused carved beard and nape, and buckled leather boots. | Strongest from high rear three-quarter. Side still shows the seat and waistband as separate masses. The owner’s verdict is pending. |
 | [2026-11-21 · fitted smock and seat](../experiments/2026-11-21-seat-and-smock/README.md) | Turn 6 parent. Continuous quad pelvis with branched thighs, a fitted shirt hem, and a waistband that follows each leg. | Closed the visible flank pocket in side and low rear. Low front shows a separate waistband lip. Arne liked the shirt fit and found the seat pointy. |
 | [2026-11-21 · rounded seat and ceramic glaze](../experiments/2026-11-21-rounded-seat/README.md) | Turn 7 parent. Broader rear arc based on the approved profile, refitted shirt and waistband, and new glaze colors. | Rounded the side profile while keeping the seat-to-leg contact. From low rear, the waistband still reads separately. Owner verdict pending. |
+| [2026-11-21 · continuous trousers, 360° carved hair & soft rims](../experiments/2026-11-21-garment-anatomy-carved-hair/README.md) | Turn 8 parent. Continuous bifurcated two-leg trouser cage with hand-BVH compression, 360° spine-radial carved beard, C1 soft cap/smock rims, fused wrists/hands, and stiff-leather boots. | Waistband-to-leg garment continuity, back/side beard carving, rim softness, wrist/hand integration, and boot planes improved across `front_low`, `rear_low`, and `side`; separate sleeve-to-smock shoulder intersection remains visible in `rear_high`. Owner verdict pending. |
 
 ### Matched comparison
 
@@ -39,6 +41,8 @@ The left column is the subdivision study. The right column is the multires refin
 ![Matched front and low three-quarter comparisons](comparison.jpg)
 
 ### Next open experiment
+
+**After turn 9:** Branch the upper sleeves cleanly out of `Smock` (applying Turn 7's continuous mesh branching to the upper shoulder/armholes) and separate the frontmost temple curl cleanly from the outer ear pinna; test against Turn 9 in matched `rear_high`, `side`, and `wink_side` neutral clay. [Turn 9 handoff](../experiments/2026-11-21-garment-anatomy-carved-hair/README.md#notes-for-the-next-contributor)
 
 **After turn 8:** Try to beat turn 8’s garment read in matched low rear and low front. Keep the rounded side arc and fitted shirt edge. [Challenge and evidence](../experiments/2026-11-21-rounded-seat/README.md#notes-for-the-next-contributor)
 
@@ -92,3 +96,10 @@ Append a dated entry for each new turn. Put your model’s name first in the ent
 - **Observation.** Arne liked the shirt fit and found the seat pointy. In side view it retreated too fast on both sides of its fullest point.
 - **Discovery.** Subtracting from the apex shortened the rear projection and left a small shoulder. A broader oval arc at practically the same projection agreed better with the approved profile. The shirt and waistband were refitted to the new arc. [Reference and trials](../experiments/2026-11-21-rounded-seat/Reference-Profile.jpg)
 - **Challenge.** Keep the rounded seat and fitted shirt. Try to make the trouser band and both legs read as one garment in matched low rear and low front views. [Handoff](../experiments/2026-11-21-rounded-seat/README.md#notes-for-the-next-contributor) · [Relay prompt](HANDOFF.txt)
+
+#### 2026-11-21 · Turn 9 · Neon (Gemini 4 Neon) · Continuous trousers, 360° carved hair & soft rims (Antigravity / Blender 5.2.1)
+
+- **Links:** [Run record](../experiments/2026-11-21-garment-anatomy-carved-hair/README.md) · Parent: [Clive-RoundedSeat.blend](../experiments/2026-11-21-rounded-seat/Clive-RoundedSeat.blend) (`465722b`) · Candidate: [Clive-GarmentAndHair.blend](../experiments/2026-11-21-garment-anatomy-carved-hair/Clive-GarmentAndHair.blend) · [Matched clay (`Comparison-Clay`)](../experiments/2026-11-21-garment-anatomy-carved-hair/Comparison-Clay.jpg) · [Close-ups & 160 px check (`Comparison-Details`)](../experiments/2026-11-21-garment-anatomy-carved-hair/Comparison-Details.jpg) · [Least convincing (`Least-Clay`)](../experiments/2026-11-21-garment-anatomy-carved-hair/Least-Clay.jpg) · [Studio hero](../experiments/2026-11-21-garment-anatomy-carved-hair/Studio-Hero.jpg) · [Studio rear](../experiments/2026-11-21-garment-anatomy-carved-hair/Studio-Rear.jpg) *(Owner verdict: Pending.)*
+- **Observations:** On `front_low`, `rear_low`, and `side` (`Comparison-Clay.jpg`, `Comparison-Details.jpg`), replacing the four-piece trousers with one forked continuous garment compressed under fused wrist/hand cages, wrapping Greek-carved beard locks 360° around the jaws/back, softening cap/smock edges with C1 turns, and crisp-planing the boots eliminated Turn 8's smooth beard egg, floating rear waistband shelf, and separate finger tubes, while `rear_high` (`Least-Clay.jpg`) and close-up `cap_rim_side` still show the separate sleeve-to-smock shoulder seam and slight temple-curl grazing over the ear pinna.
+- **Discoveries:** Narrow trouser fold bells over coarse rings (`Δr = 2.45 mm`, `22` rings) form thin horizontal fins, uncapped `BVHTree` thigh clearance near `x = 0` teleports crotch bridge vertices into the opposite thigh (fixed via half-space `hit.x * center.x >= 0.5` guard + `abs(p.x) > 1.8`), `z_off` reversals in a rim profile fold an unintended waistband shelf behind the fingers, and spine-radial normals replace one-sided `-Y` ribbon carving across the entire back of the beard over a buried `2.4+ mm` inner core.
+- **Suggested improvement:** Starting from [Clive-GarmentAndHair.blend](../experiments/2026-11-21-garment-anatomy-carved-hair/Clive-GarmentAndHair.blend), branch the sleeves directly out of the `Smock` cage across a sculpted armhole saddle and carve clear separation between the frontmost temple curl and outer ear pinna, verifying on matched `rear_high`, `side`, and `wink_side` clay renders.
