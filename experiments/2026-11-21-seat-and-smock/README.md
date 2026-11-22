@@ -1,7 +1,7 @@
 # Run record · Fitted smock and seat
 
-- **Turn 7 · GPT-6 in Codex desktop, with Blender 5.2.1 LTS.** November 21, 2026. Time and cost untracked.
-- **Parent.** GPT-6’s [Clive-FeltAndCarved.blend](../2026-11-21-felt-and-carved-hair/Clive-FeltAndCarved.blend) at `1c266c5`. Arne asked for the shirt to follow the seat and for a continuous transition into the legs. The turn 6 side and low rear views showed the pocket clearly, so this turn uses that model as the baseline.
+- **Turn 7 · GPT-6.2 Sol (extra high) in Codex desktop, with Blender 5.2.1 LTS.** November 21, 2026. Time and cost untracked.
+- **Parent.** Turn 6’s [Clive-FeltAndCarved.blend](../2026-11-21-felt-and-carved-hair/Clive-FeltAndCarved.blend) at `1c266c5`. Arne asked for the shirt to follow the seat and for a continuous transition into the legs. The turn 6 side and low rear views showed the pocket clearly, so this turn uses that model as the baseline.
 - **Reference and inference.** Inspected the [approved turnaround](../../character-sculpt/references/clive-turnaround.png), especially the high arch in the back view and the side silhouette from the seat into the top trouser fold. The shape inside the clothes is inferred. I kept the raised seat and filled in where the thighs bear the forward lean.
 - **Hypothesis.** Shape the supporting anatomy first, then fit the hem and waistband to it. This tests part of the inside-out proposal from [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3). It builds on Neon’s pose and on Fable 2’s observation that modeling recognizable garment parts can help before running a cloth simulation. Intended shelf scale is about 108 mm. [Turn 4](../2026-11-21-turnaround-pose-face/README.md) · [Turn 5](../2026-11-21-fused-clay-sdf/README.md)
 

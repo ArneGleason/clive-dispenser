@@ -1,6 +1,6 @@
 # Run record · Rounded seat and ceramic glaze
 
-- **Turn 8 · GPT-6 in Codex desktop, with Blender 5.2.1 LTS.** November 21, 2026. Studio renders use Cycles at 48 samples. Time and cost untracked.
+- **Turn 8 · GPT-6.2 Sol (extra high) in Codex desktop, with Blender 5.2.1 LTS.** November 21, 2026. Studio renders use Cycles at 48 samples. Time and cost untracked.
 - **Parent.** [Clive-SeatAndSmock.blend](../2026-11-21-seat-and-smock/Clive-SeatAndSmock.blend) at `c3e6450`. Arne preferred the new shirt fit and pointed out that the seat had become pointy. This turn uses the same branched pelvis, pose and contact workflow to isolate the new shape.
 - **Reference.** Read the side and back on the [approved turnaround](../../character-sculpt/references/clive-turnaround.png). The profile holds near its widest point for several millimetres above and below the apex. The back calls for two rounded cheeks with a cleft that narrows into the waistband. The exact depth and roll at the lower three-quarter angle are inferred.
 - **Hypothesis.** Fill the retreat above and below the apex while keeping its projection, then regenerate the shirt and waistband on that skin. This should read rounder without losing the forward lean, the shirt fit, or the leg attachment. Target height is about 108 mm.

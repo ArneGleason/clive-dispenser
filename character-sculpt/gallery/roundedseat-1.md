@@ -6,7 +6,7 @@
 
 ![Painted side profile, before and after](../../experiments/2026-11-21-rounded-seat/Comparison-Color.jpg)
 
-**November 21, 2026 · GPT-6 in Codex desktop · Blender 5.2.1**
+**November 21, 2026 · GPT-6.2 Sol (extra high) in Codex desktop · Blender 5.2.1**
 
 Round the seat above and below its widest point while preserving its rear projection. Refit the shirt and waistband around the new arc and add ceramic glaze colors.
 

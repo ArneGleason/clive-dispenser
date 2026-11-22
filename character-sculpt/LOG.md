@@ -14,9 +14,9 @@ Arne refers to turns by the model that took them. Add yourself here when you tak
 | 3 | not recorded | Blender | [Multires refinement](../experiments/2026-11-21-multires-refinement/) |
 | 4 | **Neon** (its run record says “Antigravity (Gemini)”) | Antigravity, Blender 5.2.1 | [Turnaround pose & continuous face](../experiments/2026-11-21-turnaround-pose-face/README.md) |
 | 5 | **Fable 2** (Claude Fable 5.2) | Claude Code, PyTorch + Blender 5.2.1 | [One fused clay surface](../experiments/2026-11-21-fused-clay-sdf/README.md) |
-| 6 | **GPT-6** | Codex desktop, Blender 5.2.1 | [Felt and carved hair](../experiments/2026-11-21-felt-and-carved-hair/README.md) |
-| 7 | **GPT-6** | Codex desktop, Blender 5.2.1 | [Fitted smock and seat](../experiments/2026-11-21-seat-and-smock/README.md) |
-| 8 | **GPT-6** | Codex desktop, Blender 5.2.1 | [Rounded seat and ceramic glaze](../experiments/2026-11-21-rounded-seat/README.md) |
+| 6 | **GPT-6.2 Sol (extra high)** | Codex desktop, Blender 5.2.1 | [Felt and carved hair](../experiments/2026-11-21-felt-and-carved-hair/README.md) |
+| 7 | **GPT-6.2 Sol (extra high)** | Codex desktop, Blender 5.2.1 | [Fitted smock and seat](../experiments/2026-11-21-seat-and-smock/README.md) |
+| 8 | **GPT-6.2 Sol (extra high)** | Codex desktop, Blender 5.2.1 | [Rounded seat and ceramic glaze](../experiments/2026-11-21-rounded-seat/README.md) |
 
 | Experiment | Method and evidence | What the run established |
 |---|---|---|
@@ -70,21 +70,21 @@ Append a dated entry for each new turn. Put your model’s name first in the ent
 - **Discoveries:** Scaling every mass to the sheet and fusing them changed the read more than any face edit, and garment parts alone made the trousers recognizable without a cloth simulation; thin spiral curls (coat hooks, then beads), opposite-phase beard waves (blobs with holes), a centre-line moustache (a bandage), capsule sleeves and a round waistband (a rolling pin) all failed and are documented with what replaced them; the price is a script plus baked mesh instead of an editable cage.
 - **Suggested improvement:** In `sculpt_clive.py`, pull the sleeves, trouser pool and boots back to the sheet's measurements, lengthen and slouch `HAT_SPINE`, and stand the legs up under the hips, then re-cut the open eye to about 4.5 mm; it worked if the painted side silhouette matches the sheet at nose tip, cap hook, seat and heel within about 2 mm and a clay `front` render shrunk to 160 px still shows which eye is open.
 
-#### 2026-11-21 · Turn 6 · GPT-6 · Felt and carved hair (Codex desktop / Blender 5.2.1)
+#### 2026-11-21 · Turn 6 · GPT-6.2 Sol (extra high) · Felt and carved hair (Codex desktop / Blender 5.2.1)
 
 - **Links.** [Run record](../experiments/2026-11-21-felt-and-carved-hair/README.md) · [Parent: PoseFace](../experiments/2026-11-21-turnaround-pose-face/Clive-PoseFace.blend) (`66fe059`) · [Editable candidate](../experiments/2026-11-21-felt-and-carved-hair/Clive-FeltAndCarved.blend) · [Matched high rear](../experiments/2026-11-21-felt-and-carved-hair/Best-Clay.jpg) · [Matched side](../experiments/2026-11-21-felt-and-carved-hair/Least-Clay.jpg) · [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)
 - **Observations.** In high rear clay the new brim and folds turn into the nape, while the side still exposes the recessed flank below the raised seat.
 - **Discoveries.** Integrating the hook spine and section rotation eased a pinched fold. Fusing the carved ribbons over a backing joined each hair region, and fitting the pinna under the brim removed its visible breakthrough. [Iterations](../experiments/2026-11-21-felt-and-carved-hair/Iterations.jpg)
 - **Suggested improvement.** Fit a continuous two-leg trouser cage to the hands and seat. In matched side and low rear clay the flank should touch the waistband with no daylight. From low front, follow the waistband down both legs. Owner verdict pending.
 
-#### 2026-11-21 · Turn 7 · GPT-6 · Fitted smock and seat (Codex desktop / Blender 5.2.1)
+#### 2026-11-21 · Turn 7 · GPT-6.2 Sol (extra high) · Fitted smock and seat (Codex desktop / Blender 5.2.1)
 
 - **Links.** [Run record](../experiments/2026-11-21-seat-and-smock/README.md) · [Parent](../experiments/2026-11-21-felt-and-carved-hair/Clive-FeltAndCarved.blend) (`1c266c5`) · [Editable candidate](../experiments/2026-11-21-seat-and-smock/Clive-SeatAndSmock.blend) · [Matched side and low rear](../experiments/2026-11-21-seat-and-smock/Comparison-Clay.jpg)
 - **Observation.** In side and low rear the smock now wraps over the seat, and the thighs run into the waistband where the parent showed a pocket.
 - **Discovery.** The old hem cut through the enlarged seat in a same-seat test. The first single-loop pelvis also exposed skin below the trousers. The fitted hem and forked thigh cage fixed those breaks. [Hem test](../experiments/2026-11-21-seat-and-smock/Fit-Test.jpg)
 - **Suggested improvement.** Join the waistband and leg rolls through a single garment cage. Check for a continuous fold from each grip into its trouser leg in matched low front without losing the low rear fit. Owner verdict pending.
 
-#### 2026-11-21 · Turn 8 · GPT-6 · Rounded seat and ceramic glaze (Codex desktop / Blender 5.2.1)
+#### 2026-11-21 · Turn 8 · GPT-6.2 Sol (extra high) · Rounded seat and ceramic glaze (Codex desktop / Blender 5.2.1)
 
 - **Links.** [Run record](../experiments/2026-11-21-rounded-seat/README.md) · [Parent](../experiments/2026-11-21-seat-and-smock/Clive-SeatAndSmock.blend) (`c3e6450`) · [Editable candidate](../experiments/2026-11-21-rounded-seat/Clive-RoundedSeat.blend) · [Matched color](../experiments/2026-11-21-rounded-seat/Comparison-Color.jpg) · [Matched clay](../experiments/2026-11-21-rounded-seat/Comparison-Clay.jpg)
 - **Observation.** Arne liked the shirt fit and found the seat pointy. In side view it retreated too fast on both sides of its fullest point.

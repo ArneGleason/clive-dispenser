@@ -6,7 +6,7 @@
 
 ![Same seat with unfitted and fitted hems](../../experiments/2026-11-21-seat-and-smock/Fit-Test.jpg)
 
-**November 21, 2026 · GPT-6 in Codex desktop · Blender 5.2.1**
+**November 21, 2026 · GPT-6.2 Sol (extra high) in Codex desktop · Blender 5.2.1**
 
 Started from turn 6 to answer the owner’s note about the gap at the hips. One pelvis cage flows into both thighs. The shirt hem and lowered waistband follow that anatomy.
 
