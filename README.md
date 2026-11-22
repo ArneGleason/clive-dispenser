@@ -6,31 +6,23 @@
 
 [Give an agent a turn](#give-an-agent-a-turn) · [Open the approved turnaround](character-sculpt/references/clive-turnaround.png) · [Browse the gallery](character-sculpt/gallery/README.md) · [Read the experiment log](character-sculpt/LOG.md)
 
-| Turn 6 · Felt and carved hair | High rear three-quarter |
-|---|---|
-| [![Clive winking in painted ceramic, seen from the front three-quarter](experiments/2026-11-21-felt-and-carved-hair/Studio-Hero.jpg)](character-sculpt/gallery/feltcarved-1.md) | [![Clive from the high rear, with the felt rim above carved nape hair](experiments/2026-11-21-felt-and-carved-hair/Studio-Rear.jpg)](character-sculpt/gallery/feltcarved-6.md) |
+[![Matched before and after side view of Clive in glazed ceramic colors](experiments/2026-11-21-rounded-seat/Comparison-Color.jpg)](character-sculpt/gallery/roundedseat-1.md)
 
-GPT-6 in Codex desktop picked Neon’s PoseFace, redrew the cap so it drops over the temples and curls into a hook, and shaped the beard into a sideways sweep. [Open the editable Blender candidate and run record](experiments/2026-11-21-felt-and-carved-hair/README.md).
+Turn 8 rounds the seat against the approved profile and brings the ceramic colors into the sculpt. GPT-6.2 Sol (extra high) in Codex desktop started from turn 7 and kept its fitted shirt and thigh connection. [Editable Blender candidate and run record](experiments/2026-11-21-rounded-seat/README.md) · [Front studio render](experiments/2026-11-21-rounded-seat/Studio-Hero.jpg) · [Rear studio render](experiments/2026-11-21-rounded-seat/Studio-Rear.jpg)
 
 ## The relay so far
 
 Pick any saved Clive or start fresh. Each turn tests a sculpting idea, shows matched clay views, and leaves the next sculptor a specific change to try. Arne gives the verdict.
 
-| 1 · Description only | 2 · Subdivision cage | 3 · Multires refinement | 4 · Turnaround pose & continuous face | 5 · One fused clay surface | 6 · Felt and carved hair *(latest)* |
-|---|---|---|---|---| --- |
-| [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) | [![One fused clay surface](experiments/2026-11-21-fused-clay-sdf/Studio-Hero.jpg)](character-sculpt/gallery/fusedclay-1.md) | [![Felt and carved hair](experiments/2026-11-21-felt-and-carved-hair/Studio-Hero.jpg)](character-sculpt/gallery/feltcarved-1.md) |
-| *model not recorded* | *model not recorded* | *model not recorded* | **Neon**, in Antigravity | **Fable 2** (Claude Fable 5.2), in Claude Code | **GPT-6**, in Codex desktop with Blender |
-| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* | Rebuilt as a single surface at the sheet's chunky proportions, trousers made of garment parts. *"Tried harder, made some mistakes that it couldn't fix."* | Redrew the felt cap, carved hair and leather boots on the PoseFace parent. |
+| 1 · Description only | 2 · Subdivision cage | 3 · Multires refinement | 4 · Turnaround pose & continuous face | 5 · One fused clay surface | 6 · Felt and carved hair | 7 · Fitted smock and seat | 8 · Rounded seat and glaze *(latest)* |
+|---|---|---|---|---| --- | --- | --- |
+| [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) | [![One fused clay surface](experiments/2026-11-21-fused-clay-sdf/Studio-Hero.jpg)](character-sculpt/gallery/fusedclay-1.md) | [![Felt and carved hair](experiments/2026-11-21-felt-and-carved-hair/Studio-Hero.jpg)](character-sculpt/gallery/feltcarved-1.md) | [![Fitted smock and seat](experiments/2026-11-21-seat-and-smock/Studio-Rear.jpg)](character-sculpt/gallery/seatsmock-1.md) | [![Rounded seat and ceramic glaze](experiments/2026-11-21-rounded-seat/Studio-Rear.jpg)](character-sculpt/gallery/roundedseat-3.md) |
+| *model not recorded* | *model not recorded* | *model not recorded* | **Neon**, in Antigravity | **Fable 2** (Claude Fable 5.2), in Claude Code | **GPT-6.2 Sol (extra high)**, in Codex desktop with Blender | **GPT-6.2 Sol (extra high)**, in Codex desktop with Blender | **GPT-6.2 Sol (extra high)**, in Codex desktop with Blender |
+| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* | Rebuilt as a single surface at the sheet's chunky proportions, trousers made of garment parts. *"Tried harder, made some mistakes that it couldn't fix."* | Redrew the felt cap, carved hair and leather boots on the PoseFace parent. | Fit the shirt to the seat and carried the pelvis into both thighs. | Rounded the seat against the approved side profile and painted the ceramic glaze. |
 
-### Turn 6 in matched clay
+### Try to beat turn 8
 
-Same frame and lighting in each pair. PoseFace is on the left and turn 6 is on the right.
-
-| Most improved · high rear three-quarter | Least convincing · side profile |
-|---|---|
-| [![Matched clay comparison of the cap and nape](experiments/2026-11-21-felt-and-carved-hair/Best-Clay.jpg)](character-sculpt/gallery/feltcarved-2.md) | [![Matched side profile showing the recessed flank](experiments/2026-11-21-felt-and-carved-hair/Least-Clay.jpg)](character-sculpt/gallery/feltcarved-3.md) |
-
-The rear view shows how the rim now turns into the carved nape. Side-on, the seat still hangs over a recessed flank above the waistband. The next sculptor could try a continuous trouser cage that follows the seat and the pull of Clive’s hands. [Handoff and evidence](experiments/2026-11-21-felt-and-carved-hair/README.md#notes-for-the-next-contributor) · [Back-and-forth on Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)
+The side view now holds a rounder curve. From low rear, the waistband and pools would benefit from reading as one garment. Try it from any parent and show your side, low rear and low front next to turn 8. [Matched clay](experiments/2026-11-21-rounded-seat/Comparison-Clay.jpg) · [Reference and rejected trial](experiments/2026-11-21-rounded-seat/Reference-Profile.jpg) · [Handoff](experiments/2026-11-21-rounded-seat/README.md#notes-for-the-next-contributor) · [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)
 
 ---
 
