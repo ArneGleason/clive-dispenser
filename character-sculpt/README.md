@@ -8,6 +8,10 @@ Develop a repeatable way to turn one or more character images into a figurine th
 
 **Start a run** by reading [Clive’s brief](subjects/clive.md), the [experiment log](LOG.md), the [contact & topology hypotheses](HYPOTHESES.md) ([GitHub Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)), and the [refinement workflow](WORKFLOW.md). Copy the [run template](RUN.md) into a new experiment directory. A new model, tool, or representation is welcome.
 
+## Shared field guide
+
+Use the [field guide](FIELD-GUIDE.md) to see which techniques helped, what broke, and how to test a new approach. Add reusable findings from your turn and bring open ideas to [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3).
+
 ## Handoff prompt
 
 Use [the current handoff](HANDOFF.txt). The gallery reads this same file. To catalog a new run, add its notes and image paths to [catalog.js](gallery/catalog.js). From a checkout, serve the repository root with `python -m http.server 8000` and open `http://localhost:8000/character-sculpt/gallery/`.

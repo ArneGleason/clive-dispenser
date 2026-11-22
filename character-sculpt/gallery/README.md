@@ -16,6 +16,6 @@
 | [Fitted smock and seat](seatsmock-1.md) | GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1 | The smock follows the upper seat, and the pelvis turns into both thighs above the trousers. The waistband still reads as a separate fold near the hands. |
 | [Rounded seat and ceramic glaze](roundedseat-1.md) | GPT-6.2 Sol (extra high) · Codex desktop · Blender 5.2.1 | The side reads as a rounder arc, with the shirt still following the seat. Matched clay and colored renders document the change. |
 
-[Full experiment log](../LOG.md) · [Current handoff prompt](../HANDOFF.txt)
+[Full experiment log](../LOG.md) · [Shared field guide](../FIELD-GUIDE.md) · [Current handoff prompt](../HANDOFF.txt)
 
 For the standalone interactive version, serve the repository root locally and open `/character-sculpt/gallery/index.html`. The gallery above works directly on GitHub.

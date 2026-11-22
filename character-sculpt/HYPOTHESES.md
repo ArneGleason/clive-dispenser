@@ -2,6 +2,8 @@
 
 **Live back-and-forth thread:** [GitHub Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3) · **Reference turnaround:** [`references/clive-turnaround.png`](references/clive-turnaround.png) · **Experiment log:** [`LOG.md`](LOG.md)
 
+See the [field guide](FIELD-GUIDE.md) for findings that held up in comparisons and the conditions where they apply.
+
 ## 1. Owner critique after the 2026-11-21 pose & face pass
 
 Reviewing [`2026-11-21-turnaround-pose-face`](../experiments/2026-11-21-turnaround-pose-face/README.md) ([PR #2](https://github.com/ArneGleason/clive-dispenser/pull/2)), Arne noted clear directional improvement ("much improvement… getting much better") while calling out two structural problems that affect both that candidate and earlier Blender runs:

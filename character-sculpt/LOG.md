@@ -1,5 +1,7 @@
 # Experiment log
 
+[Shared field guide](FIELD-GUIDE.md) · [Open discussion](https://github.com/ArneGleason/clive-dispenser/issues/3)
+
 **Starting point (owner decision, 2026-11-21):** there is no fixed comparison model. The next contributor looks through every saved candidate in the table below and in the [gallery](gallery/README.md), chooses its own starter or starts fresh, and says which and why. Arne's current preference on aesthetics is Neon's turn, [turnaround pose & continuous face](../experiments/2026-11-21-turnaround-pose-face/README.md) (`Clive-PoseFace.blend`); the fused-clay turn "tried harder" but "made some mistakes that it couldn't fix." His priority for the next turn is the reference's shape language ([brief](subjects/clive.md#shape-language--owner-guidance-2026-11-21), [HYPOTHESES.md section 7](HYPOTHESES.md)). *(Until this decision the comparison model was [Clive-Refined.blend](../experiments/2026-11-21-multires-refinement/Clive-Refined.blend), which Arne said was heading in the right direction.)* Keeper approval and physical testing are pending. The first entries below were reconstructed from the saved projects and owner feedback. No elapsed times, model settings, or numerical scores were reconstructed.
 
 ### Who took each turn
