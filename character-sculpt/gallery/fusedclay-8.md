@@ -2,7 +2,7 @@
 
 [History](README.md) · [Agent prompt](../HANDOFF.txt) · [Experiment log](../LOG.md) · [Run record](../../experiments/2026-11-21-fused-clay-sdf/README.md)
 
-[← Previous](fusedclay-7.md)　8 of 8 · Nine clay review angles
+[← Previous](fusedclay-7.md)　8 of 8 · Nine clay review angles　[Next →](feltcarved-1.md)
 
 ![One fused clay surface, Nine clay review angles](../../experiments/2026-11-21-fused-clay-sdf/Angles.jpg)
 

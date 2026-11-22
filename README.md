@@ -4,44 +4,25 @@
 
 **The goal:** Turn one approved ceramic turnaround into a cheeky mooning garden gnome you’d genuinely want to 3D-print and put on a shelf — even in unpainted plastic. Once Clive’s likeness, expression, and pose earn the nod, we’ll marry the winning exterior to the mechanical dispenser below so tipping his head forward pops a Tic Tac or Pez out of his bum.
 
-[![The approved turnaround above, the latest relay turn below](experiments/2026-11-21-fused-clay-sdf/Turnaround-vs-Reference.jpg)](experiments/2026-11-21-fused-clay-sdf/README.md)
+[Give an agent a turn](#give-an-agent-a-turn) · [Open the approved turnaround](character-sculpt/references/clive-turnaround.png) · [Browse the gallery](character-sculpt/gallery/README.md) · [Read the experiment log](character-sculpt/LOG.md)
 
-*Top: the one image every turn is measured against. Bottom: where the relay stands after five turns. The boots, cap and face still have a way to go. Think you can close the gap?*
+[![Matched before and after side view of Clive in glazed ceramic colors](experiments/2026-11-21-rounded-seat/Comparison-Color.jpg)](character-sculpt/gallery/roundedseat-1.md)
 
-> **Visual target:** [Open the original turnaround PNG](https://raw.githubusercontent.com/ArneGleason/clive-dispenser/main/character-sculpt/references/clive-turnaround.png) (`character-sculpt/references/clive-turnaround.png`). Every sculpt turn measures itself against this sheet — not earlier model renders.
-
-[Browse the sculpt gallery](character-sculpt/gallery/README.md) · [Read the experiment log](character-sculpt/LOG.md) · [Open hypotheses & discussion (Issue #3)](https://github.com/ArneGleason/clive-dispenser/issues/3) · [Copy the agent prompt](#give-an-agent-a-turn)
-
----
+Turn 8 rounds the seat against the approved profile and brings the ceramic colors into the sculpt. GPT-6.2 Sol (extra high) in Codex desktop started from turn 7 and kept its fitted shirt and thigh connection. [Editable Blender candidate and run record](experiments/2026-11-21-rounded-seat/README.md) · [Front studio render](experiments/2026-11-21-rounded-seat/Studio-Hero.jpg) · [Rear studio render](experiments/2026-11-21-rounded-seat/Studio-Rear.jpg)
 
 ## The relay so far
 
-Each turn builds on the shared lab notes, tests or challenges a prior hypothesis, renders matched clay comparisons (`character-sculpt/tools/review_views.py`), and leaves honest observations — including failed ideas and the least convincing angle — for the next contributor.
+Pick any saved Clive or start fresh. Each turn tests a sculpting idea, shows matched clay views, and leaves the next sculptor a specific change to try. Arne gives the verdict.
 
-| 1 · Description only | 2 · Subdivision cage | 3 · Multires refinement | 4 · Turnaround pose & continuous face | 5 · One fused clay surface *(latest)* |
-|---|---|---|---|---|
-| [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) | [![One fused clay surface](experiments/2026-11-21-fused-clay-sdf/Studio-Hero.jpg)](character-sculpt/gallery/fusedclay-1.md) |
-| *model not recorded* | *model not recorded* | *model not recorded* | **Neon**, in Antigravity | **Fable 2** (Claude Fable 5.2), in Claude Code |
-| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* | Rebuilt as a single surface at the sheet's chunky proportions, trousers made of garment parts. *"Tried harder, made some mistakes that it couldn't fix."* |
+| 1 · Description only | 2 · Subdivision cage | 3 · Multires refinement | 4 · Turnaround pose & continuous face | 5 · One fused clay surface | 6 · Felt and carved hair | 7 · Fitted smock and seat | 8 · Rounded seat and glaze *(latest)* |
+|---|---|---|---|---| --- | --- | --- |
+| [![Assembled sculpt](character-sculpt/gallery/images/assembly.jpg)](character-sculpt/gallery/assembled-1.md) | [![Subdivision study](character-sculpt/gallery/images/subd-front.jpg)](character-sculpt/gallery/subdivision-1.md) | [![Multires refinement](character-sculpt/gallery/images/refined.jpg)](character-sculpt/gallery/multires-1.md) | [![Turnaround pose & continuous face](experiments/2026-11-21-turnaround-pose-face/Studio-Hero.jpg)](character-sculpt/gallery/poseface-1.md) | [![One fused clay surface](experiments/2026-11-21-fused-clay-sdf/Studio-Hero.jpg)](character-sculpt/gallery/fusedclay-1.md) | [![Felt and carved hair](experiments/2026-11-21-felt-and-carved-hair/Studio-Hero.jpg)](character-sculpt/gallery/feltcarved-1.md) | [![Fitted smock and seat](experiments/2026-11-21-seat-and-smock/Studio-Rear.jpg)](character-sculpt/gallery/seatsmock-1.md) | [![Rounded seat and ceramic glaze](experiments/2026-11-21-rounded-seat/Studio-Rear.jpg)](character-sculpt/gallery/roundedseat-3.md) |
+| *model not recorded* | *model not recorded* | *model not recorded* | **Neon**, in Antigravity | **Fable 2** (Claude Fable 5.2), in Claude Code | **GPT-6.2 Sol (extra high)**, in Codex desktop with Blender | **GPT-6.2 Sol (extra high)**, in Codex desktop with Blender | **GPT-6.2 Sol (extra high)**, in Codex desktop with Blender |
+| Built from text alone before the turnaround was available. | First turnaround-guided face loops and lean. | Added sculpt levels, collar & hand fixes. Directionally positive. | Matched forward lean & continuous Multires L3 face. *"Much improvement… getting much better."* | Rebuilt as a single surface at the sheet's chunky proportions, trousers made of garment parts. *"Tried harder, made some mistakes that it couldn't fix."* | Redrew the felt cap, carved hair and leather boots on the PoseFace parent. | Fit the shirt to the seat and carried the pelvis into both thighs. | Rounded the seat against the approved side profile and painted the ceramic glaze. |
 
-### Latest matched clay comparison
+### Try to beat turn 8
 
-Same neutral clay, light and orthographic frame in every column, so geometry speaks without paint. Left to right: turn 3, turn 4, turn 5.
-
-| Whole figure, from the angle that improved most down to the one that holds up least | Face |
-|---|---|
-| [![Matched four-angle clay comparison](experiments/2026-11-21-fused-clay-sdf/Comparison-Clay.jpg)](experiments/2026-11-21-fused-clay-sdf/README.md) | [![Matched clay face comparison](experiments/2026-11-21-fused-clay-sdf/Comparison-Face-Clay.jpg)](experiments/2026-11-21-fused-clay-sdf/README.md) |
-
-The latest turn answered Arne’s two structural critiques head-on ([contact tests](experiments/2026-11-21-fused-clay-sdf/Comparison-Contact-Clay.jpg)): the trousers now trace as waistband, seat seam and two legs, and no part can pass through another because the figure is one surface. It paid for that with a weaker [side view](experiments/2026-11-21-fused-clay-sdf/Least-Convincing-Side.jpg) and a softer face than turn 4.
-
-### What’s up for grabs next
-
-Arne’s verdict after five turns ([brief](character-sculpt/subjects/clive.md#shape-language--owner-guidance-2026-11-21) · [hypotheses and results](character-sculpt/HYPOTHESES.md) · [log](character-sculpt/LOG.md) · [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)): every model so far puts the parts in roughly the right places and still misses what makes the sheet attractive. On aesthetics he preferred Neon’s turn 4 (pose & continuous face) to the latest one.
-
-1. **Shape language.** Look at the cap on the sheet. The rim is not a ring: it arches over the brow, falls over the temples and behind the ears, and settles at the nape, and the folds spiral up into the hook as lines you could draw. The beard does the same in all three dimensions. So far the models’ curves run along one axis.
-2. **Material character.** The cap should feel like worn felt, the boots like stiff leather, the skin like one rounded organic surface, and the hair carved the way Greek and Roman sculptors carved it.
-3. **Interpret, don’t trace.** The sheet is three image-generated views that each look good and probably don’t agree. Bring one consistent set of shape rules and apply it everywhere.
-4. **Start wherever you like.** Pick any saved Clive as your starter, or start fresh, and say why. Turn 4 has the crisper face and an editable cage. Turn 5 has recognizable trousers and clean seams in a script that rebuilds in seconds, and a weak side view. A posed humanoid base, a real cloth simulation and image-to-3D are all still untested.
+The side view now holds a rounder curve. From low rear, the waistband and pools would benefit from reading as one garment. Try it from any parent and show your side, low rear and low front next to turn 8. [Matched clay](experiments/2026-11-21-rounded-seat/Comparison-Clay.jpg) · [Reference and rejected trial](experiments/2026-11-21-rounded-seat/Reference-Profile.jpg) · [Handoff](experiments/2026-11-21-rounded-seat/README.md#notes-for-the-next-contributor) · [Issue #3](https://github.com/ArneGleason/clive-dispenser/issues/3)
 
 ---
 
